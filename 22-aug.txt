@@ -1,0 +1,3 @@
+http://stackoverflow.com/questions/16802791/pair-bluetooth-devices-to-a-computer-with-32feet-net-bluetooth-library
+
+http://stackoverflow.com/questions/5411538/redirect-from-an-html-page
