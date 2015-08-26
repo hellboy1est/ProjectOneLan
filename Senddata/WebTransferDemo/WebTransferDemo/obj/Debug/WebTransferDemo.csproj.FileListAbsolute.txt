@@ -1,0 +1,9 @@
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\bin\Debug\WebTransferDemo.exe
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\bin\Debug\WebTransferDemo.pdb
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\obj\Debug\WebTransferDemo.csprojResolveAssemblyReference.cache
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\obj\Debug\WebTransferDemo.Form1.resources
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\obj\Debug\WebTransferDemo.Properties.Resources.resources
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\obj\Debug\WebTransferDemo.csproj.GenerateResource.Cache
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\obj\Debug\WebTransferDemo.exe
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\obj\Debug\WebTransferDemo.pdb
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\Senddata\WebTransferDemo\WebTransferDemo\bin\Debug\MySql.Data.dll
