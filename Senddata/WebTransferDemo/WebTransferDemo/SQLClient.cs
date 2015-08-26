@@ -200,5 +200,10 @@ namespace WebTransferDemo
                 return Count;
             }
         }
+
+        internal void Insert(string p)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

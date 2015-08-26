@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Text;
 using System.Windows.Forms;
+using MySql;
 
 using MySql.Data.MySqlClient;
 
@@ -17,6 +18,8 @@ namespace WebTransferDemo
     {
         WebClient client = new WebClient();
 
+        SQLClient sqlClient = new SQLClient("localhost", "getaddress", "root", "");
+
         public Form1()
         {
             InitializeComponent();
@@ -24,16 +27,20 @@ namespace WebTransferDemo
 
         private void button1_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string connection = "server=127.0.0.1; database=getaddress;user=root; password=;";
-                MySqlConnection conn = new MySqlConnection(connection);
-                conn.Open();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
+            sqlClient.Insert("tbladdress", "address", "123");   
+            
+            
+            //try
+            //{
+            //    string connection = "server=127.0.0.1; database=getaddress;user=root; password=;";
+            //    MySqlConnection conn = new MySqlConnection(connection);
+            //    conn.Open();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show(ex.Message);
+            //}
 
  
         }
