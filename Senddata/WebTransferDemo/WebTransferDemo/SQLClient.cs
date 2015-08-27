@@ -66,7 +66,7 @@ namespace WebTransferDemo
 
             //Example: INSERT INTO names (name, age) VALUES('John Smith', '33')
             //Code: MySQLClient.Insert("names", "name, age", "'John Smith, '33'");
-            string query = "INSERT INTO " + table + " (" + column + ") VALUES (" + value + ")";
+            string query = "INSERT INTO " + table + " (" + column + ") VALUES (" + (value) + ")";
 
             try
             {
@@ -76,7 +76,7 @@ namespace WebTransferDemo
 
                     MySqlCommand cmd = new MySqlCommand(query, conn);
 
-                    cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery(); 
                     this.Close();
                 }
             }

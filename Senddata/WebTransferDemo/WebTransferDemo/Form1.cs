@@ -16,20 +16,21 @@ namespace WebTransferDemo
 {
     public partial class Form1 : Form
     {
-        WebClient client = new WebClient();
+       // WebClient client = new WebClient();
 
         SQLClient sqlClient = new SQLClient("localhost", "getaddress", "root", "");
+        public string address;
 
         public Form1()
         {
             InitializeComponent();
+            address="1234";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            sqlClient.Insert("tbladdress", "address", "123");   
-            
+            sqlClient.Insert("tbladdress", "address", address);
+                        
             
             //try
             //{
