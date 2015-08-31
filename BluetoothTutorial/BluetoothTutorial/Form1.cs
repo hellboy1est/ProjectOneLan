@@ -14,21 +14,29 @@ using InTheHand.Net.Sockets;
 using System.IO;
 using InTheHand.Windows.Forms;
 using InTheHand.Net;
+using System.Net;
+using System.Web;
+ 
  
 namespace BluetoothTutorial
 {
     public partial class Form1 : Form
-    {        
+    {
+        
         List<Device> userDevices=new List<Device>();             
         public Form1()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+
            
         }
         private System.Windows.Forms.Timer timer1; 
         
         private void btnGo_Click(object sender, EventArgs e)
         {
+          //  SendData();
+
+
             mainProgram();    
                 
                 //if (b == "08FC88541032")
@@ -59,7 +67,7 @@ namespace BluetoothTutorial
                 //{
                 //    tbOutput.AppendText("Device Name: "+ sbdd.SelectedDevice.DeviceName+"\r\n");
                 //    tbOutput.AppendText("Device Address: " + sbdd.SelectedDevice.DeviceAddress.ToString() + "\r\n");
-                //    tbOutput.AppendText("Remembered: " + sbdd.ShowRemembered.ToString() + "\r\n");
+                ////////////    tbOutput.AppendText("Remembered: " + sbdd.ShowRemembered.ToString() + "\r\n");
                 //    tbOutput.AppendText("Last Used: " + sbdd.SelectedDevice.LastUsed.ToString()+ "\r\n");
                 //    tbOutput.AppendText("Last Seen: " + sbdd.SelectedDevice.LastSeen.ToString()+"\r\n");
                 //    tbOutput.AppendText("Connected: " + sbdd.SelectedDevice.Connected.ToString());
@@ -76,17 +84,18 @@ namespace BluetoothTutorial
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {            
-            listBox2.Items.Add("NONE");
-            listBox1.Items.Add("NONE");
-            InitDeviceList();
+        {
+            
+           listBox2.Items.Add("NONE");
+           listBox1.Items.Add("NONE");
+           InitDeviceList();
 
 
 
             webBrowser1.DocumentText =
-             "<html><head><meta http-equiv='refresh' content='0; url=https://www.op.ac.nz/hub/' /> </head><body>" +
+           "<html><head><meta http-equiv='refresh' content='0; url=https://www.op.ac.nz/hub/' /> </head><body>" +
 
-             "</body></html>";
+           "</body></html>";
              
         }
 
@@ -94,7 +103,7 @@ namespace BluetoothTutorial
         {
             userDevices.Add(new Device("Rahul", "08FC88541032"));
             userDevices.Add(new Device("John", "3C915712CAC1"));
-            userDevices.Add(new Device("Chris", "f06bca92e623"));
+            userDevices.Add(new Device("Chris", "F06BCA92E623"));
             userDevices.Add(new Device("Catherine", "00F46FACBD86"));
             userDevices.Add(new Device("Tanuj", "D40B1AFC74D6"));
             userDevices.Add(new Device("Paul", "AE3C4666286A"));
@@ -146,6 +155,7 @@ namespace BluetoothTutorial
             BluetoothClient bc = new BluetoothClient();
             BluetoothDeviceInfo[] devices = bc.DiscoverDevices();
 
+          
             string a = "dadasd";
             string b = "";
             int number = 0;
@@ -153,9 +163,9 @@ namespace BluetoothTutorial
             {
                 a = number + ") " + devices[i].DeviceName + "/" + "Address: " + devices[i].DeviceAddress + "\r\n";
                 listBox2.Items.Add(a);
-                b = devices[i].DeviceAddress.ToString();
+                b = devices[i].DeviceAddress.ToString()+"\r\n";
                 //how to store all address 
-
+               
                 for (int j = 0; j < userDevices.Count; j++)
                 {
                     if (devices[i].DeviceAddress.ToString() == userDevices[j].Address)
@@ -201,24 +211,22 @@ namespace BluetoothTutorial
             if (listBox1.Items.Count > 0)
             {
                 // It contains items
+                
+                if (listBox1.Items.Contains("Rahul"))
+                {                     
+                    webBrowser1.DocumentText =
+                          "<html><head><meta http-equiv='refresh' content='0; url=http://webdev.ict.op.ac.nz/kakkr1/web3Final/' /> </head><body>" +
+                          "</body></html>";
 
-                //if (listBox1.Items.Contains("John"))
+                }
+                //else if (listBox1.Items.Contains("John"))                 
                 //{
                 //    webBrowser1.DocumentText =
                 //             "<html><body>" +
                 //             "<h1>Welcome John</h1>" +
                 //             "</body></html>";
-
-                //}
-                //else if
-                if (listBox1.Items.Contains("Rahul"))
-                {
-                    // https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fhistory.google.com%2Fhistory%2F&sacu=1&passive=1209600&acui=0#Email=hellboy1est%40gmail.com
-                   webBrowser1.DocumentText =
-                         "<html><head><meta http-equiv='refresh' content='0; url=http://webdev.ict.op.ac.nz/kakkr1/web3Final/' /> </head><body>" +
-                         "</body></html>";
                       
-                }
+                //}
                 else if (listBox1.Items.Contains("Tanuj"))
                 {
                     webBrowser1.DocumentText =
@@ -250,15 +258,57 @@ namespace BluetoothTutorial
             
 
         }
+        private void SendData()
+        {
+            System.Net.WebClient wc = new System.Net.WebClient();
+            string webData = wc.DownloadString("http://kate.ict.op.ac.nz/~kakkr1/Assignment2/add.html");
+            
+            MessageBox.Show(webData);
+
+        }
+
+         private void ds()
+        {
+            // Create a request using a URL that can receive a post. 
+            WebRequest request = WebRequest.Create("http://kate.ict.op.ac.nz/~kakkr1/Assignment2/homePage.php ");
+            // Set the Method property of the request to POST.
+            request.Method = "POST";
+            // Create POST data and convert it to a byte array.
+            string postData = "This is a test that posts this string to a Web server.";
+            byte[] byteArray = Encoding.UTF8.GetBytes(postData);
+            // Set the ContentType property of the WebRequest.
+            request.ContentType = "application/x-www-form-urlencoded";
+            // Set the ContentLength property of the WebRequest.
+            request.ContentLength = byteArray.Length;
+            // Get the request stream.
+            Stream dataStream = request.GetRequestStream();
+            // Write the data to the request stream.
+            dataStream.Write(byteArray, 0, byteArray.Length);
+            // Close the Stream objectx .
+            dataStream.Close();
+            // Get the response.
+            WebResponse response = request.GetResponse();
+            // Display the status.
+            Console.WriteLine(((HttpWebResponse)response).StatusDescription);
+            // Get the stream containing content returned by the server.
+            dataStream = response.GetResponseStream();
+            // Open the stream using a StreamReader for easy access.
+            StreamReader reader = new StreamReader(dataStream);
+            // Read the content.
+            string responseFromServer = reader.ReadToEnd();
+            // Display the content.
+            Console.WriteLine(responseFromServer);
+            MessageBox.Show(responseFromServer);
+            // Clean up the streams.
+            reader.Close();
+            dataStream.Close();
+            response.Close();
+        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
- 
-         
-
-      
  
  
     }

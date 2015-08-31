@@ -20,17 +20,26 @@ namespace WebTransferDemo
 
         SQLClient sqlClient = new SQLClient("localhost", "getaddress", "root", "");
         public string address;
+        public int[] ass=new int[5]  { 1, 2, 3, 4, 5};
 
         public Form1()
         {
             InitializeComponent();
             address="'12SD34'";
+
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            sqlClient.Insert("tbladdress", "address", address);
-                        
+            for (int i = 0; i < ass.Length; i++)
+            {
+                MessageBox.Show(ass[i].ToString());
+
+                sqlClient.Insert("tbladdress", "address", ass[i].ToString());
+            }
+          //  sqlClient.Insert("tbladdress", "address", address);
+             
             
             //try
             //{

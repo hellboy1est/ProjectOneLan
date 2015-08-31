@@ -1,12 +1,20 @@
-C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.exe
-C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.pdb
-C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\InTheHand.Net.Personal.dll
-C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\WebKitBrowser.dll
-C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\WebKit.Interop.dll
-C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\InTheHand.Net.Personal.xml
-C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.csprojResolveAssemblyReference.cache
 C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.Form1.resources
 C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.Properties.Resources.resources
 C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.csproj.GenerateResource.Cache
+C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.exe
+C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.pdb
+C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\InTheHand.Net.Personal.dll
+C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\bin\Debug\InTheHand.Net.Personal.xml
 C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.exe
 C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.pdb
+C:\Users\Rl\documents\visual studio 2013\Projects\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.csprojResolveAssemblyReference.cache
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.exe
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.pdb
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.exe
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.pdb
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\bin\Debug\InTheHand.Net.Personal.dll
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\bin\Debug\InTheHand.Net.Personal.xml
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.csprojResolveAssemblyReference.cache
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.Form1.resources
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.Properties.Resources.resources
+C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.csproj.GenerateResource.Cache

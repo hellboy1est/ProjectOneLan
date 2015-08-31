@@ -46,6 +46,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -215,6 +216,7 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.DarkKhaki;
+            this.panel3.Controls.Add(this.textBox1);
             this.panel3.Controls.Add(this.listBox2);
             this.panel3.Controls.Add(this.listBox1);
             this.panel3.Controls.Add(this.label2);
@@ -227,6 +229,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(520, 467);
             this.panel3.TabIndex = 15;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(80, 141);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(274, 186);
+            this.textBox1.TabIndex = 13;
             // 
             // Form1
             // 
@@ -266,6 +276,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
