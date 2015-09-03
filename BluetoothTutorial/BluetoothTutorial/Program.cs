@@ -17,6 +17,7 @@ namespace BluetoothTutorial
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
+            //runs program on app close
             AppDomain.CurrentDomain.ProcessExit += new EventHandler(OnProcessExit);
         }
         static void OnProcessExit(object sender, EventArgs e)

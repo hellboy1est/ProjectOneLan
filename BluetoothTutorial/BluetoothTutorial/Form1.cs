@@ -140,12 +140,9 @@ namespace BluetoothTutorial
 
         private void mainProgram()
         {
-            //Drops known user table
-            sqlClient.Drop("tblknown");
-            //Creates known user table
-            sqlClient.Create("tblknown", "id int NOT NULL AUTO_INCREMENT, name varchar(255),PRIMARY KEY (id)");
+          
 
-            //Auto update
+            //Auto run method
             if (radioButton1.Checked == true)
             {
                 timer1.Start();
@@ -166,8 +163,12 @@ namespace BluetoothTutorial
 
             BluetoothClient bc = new BluetoothClient();
             BluetoothDeviceInfo[] devices = bc.DiscoverDevices();
-          
-         
+
+            //Drops known user table
+            sqlClient.Drop("tblknown");
+            //Creates known user table
+            sqlClient.Create("tblknown", "id int NOT NULL AUTO_INCREMENT, name varchar(255),PRIMARY KEY (id)");
+
             string a = "dadasd";
             string b = "";
             int number = 0;
