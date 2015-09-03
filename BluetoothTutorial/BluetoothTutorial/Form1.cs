@@ -16,14 +16,20 @@ using InTheHand.Windows.Forms;
 using InTheHand.Net;
 using System.Net;
 using System.Web;
+using MySql;
+
+using MySql.Data.MySqlClient;
  
  
 namespace BluetoothTutorial
 {
     public partial class Form1 : Form
     {
+      
+        SQLClient sqlClient = new SQLClient("localhost", "getaddress", "root", "");
+
+        List<Device> userDevices=new List<Device>();
         
-        List<Device> userDevices=new List<Device>();             
         public Form1()
         {
             InitializeComponent();
@@ -133,7 +139,12 @@ namespace BluetoothTutorial
 
         private void mainProgram()
         {
+            //Drops known user table
+            sqlClient.Drop("tblknown");
+            //Creates known user table
+            sqlClient.Create("tblknown", "id int NOT NULL AUTO_INCREMENT, name varchar(255),PRIMARY KEY (id)");
 
+            //Auto update
             if (radioButton1.Checked == true)
             {
                 timer1.Start();
@@ -154,8 +165,8 @@ namespace BluetoothTutorial
 
             BluetoothClient bc = new BluetoothClient();
             BluetoothDeviceInfo[] devices = bc.DiscoverDevices();
-
           
+         
             string a = "dadasd";
             string b = "";
             int number = 0;
@@ -165,15 +176,26 @@ namespace BluetoothTutorial
                 listBox2.Items.Add(a);
                 b = devices[i].DeviceAddress.ToString()+"\r\n";
                 //how to store all address 
-               
+
+             
                 for (int j = 0; j < userDevices.Count; j++)
-                {
+                {               
                     if (devices[i].DeviceAddress.ToString() == userDevices[j].Address)
                     {
-                        listBox1.Items.Add(userDevices[j].UserName);
-                    }
+                        //convert list items to string
+                        string username = (userDevices[j].UserName.ToString().ToUpper());
 
+                        //adds '' to string,so sql can accept as a char
+                        string knownuser = "'" + username.Replace(",", "','") + "'";
+
+                     
+                        listBox1.Items.Add(userDevices[j].UserName);
+                        
+                        sqlClient.Insert("tblknown", "name", knownuser);
+                    }
+                    
                 }
+              
              
                 number++;
                     
