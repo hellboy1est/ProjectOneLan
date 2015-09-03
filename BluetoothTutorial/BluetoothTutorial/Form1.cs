@@ -36,8 +36,9 @@ namespace BluetoothTutorial
 
            
         }
-        private System.Windows.Forms.Timer timer1; 
-        
+        private System.Windows.Forms.Timer timer1;
+
+       
         private void btnGo_Click(object sender, EventArgs e)
         {
           //  SendData();
