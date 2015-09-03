@@ -15,44 +15,54 @@ using MySql.Data.MySqlClient;
 namespace WebTransferDemo
 {
     public partial class Form1 : Form
-    {
-       // WebClient client = new WebClient();
-
+    {  
         SQLClient sqlClient = new SQLClient("localhost", "getaddress", "root", "");
         public string address;
         public int[] ass=new int[5]  { 1, 2, 3, 4, 5};
+
+        string user = "";
+        string message = "";
 
         public Form1()
         {
             InitializeComponent();
             address="'12SD34'";
-
-            
+             
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < ass.Length; i++)
-            {
-                MessageBox.Show(ass[i].ToString());
-
-                sqlClient.Insert("tbladdress", "address", ass[i].ToString());
-            }
-          //  sqlClient.Insert("tbladdress", "address", address);
-             
+            user = textBox1.Text.ToUpper();
+            message = textBox2.Text.ToUpper();           
             
-            //try
-            //{
-            //    string connection = "server=127.0.0.1; database=getaddress;user=root; password=;";
-            //    MySqlConnection conn = new MySqlConnection(connection);
-            //    conn.Open();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
 
+            //adds '' to string,so sql can accept as a char
+            string knownuser = "'" + user.Replace(",", "','") + "'";           
+
+            //adds '' to string,so sql can accept as a char
+            string message_user = "'" + message.Replace(",", "','") + "'";
+
+          sqlClient.Update("usermac", "message="+ message_user, "username=" +knownuser);
+        //  sqlClient.Update("usermac", "message='Welcome Rahul kakkar'", "username='RAHUL KAKKAR'");
+        //  sqlClient.Update("usermac", "message='Hello tanuj'", "username='TANUJ'");
+        //  sqlClient.Update("usermac", "message='John, how are you'", "username='JOHN'"); 
+
+
+            for (int i = 0; i < ass.Length; i++)
+            { 
+//                sqlClient.Insert("usermac", "message", ass[i].ToString());
+
+                 
+            }
  
         }
+        
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
     }
 }
+ 

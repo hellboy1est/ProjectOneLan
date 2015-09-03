@@ -129,7 +129,7 @@ namespace WebTransferDemo
             }
             return;
         }
-
+  
         public Dictionary<string, string> Select(string table, string WHERE)
         {
             //This methods selects from the database, it retrieves data from it.
@@ -207,3 +207,4 @@ namespace WebTransferDemo
         }
     }
 }
+ 
