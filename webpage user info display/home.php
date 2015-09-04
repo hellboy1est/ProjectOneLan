@@ -7,17 +7,6 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
  
  <script>
- function validateForm() {
-    var x = document.forms["myForm"]["macaddress"].value;
-    if (x == null || x == "") {
-        alert("MAC address must be filled out");
-		 
-        return false;
-    }
-}
- 
- 
- 
  $(function(){
  $('#submit').click(function(){
  var errors=false;
@@ -46,14 +35,14 @@
 </head>
 <body>
  
-<form name="myForm"  action="insert-mac.php" method="post">
+<form   action="insert-mac.php" method="post">
 <fieldset>
 		<legend >Add </legend>
   Mac address:<br>
-  <input  type="text" name="macaddress" required>
+  <input  type="text" name="macaddress">
   <br>
   User Name:<br>
-   <input type="text" name="username" required>
+   <input type="text" name="username">
   <br>
   <input id="btn" name="submit" type="submit" value="Submit">
   </fieldset>

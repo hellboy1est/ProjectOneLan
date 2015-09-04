@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>Add Message</title>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="cssStyles.css">
+		 
 </head>
 <body>
 
@@ -35,7 +38,7 @@ if (isset($_POST['update']))
 			// update data in mysql database 
 $sql="UPDATE usermac SET message='$message' WHERE username='$name'" or die ("this");
 $result=mysqli_query($conn,$sql) or die ("this stuffedup");
-		echo"<b>Message added for:</b> <i>$name</i><br><b>Message:</b><i>$message</i>";
+		echo"<div id='myButton1'>Message added for:$name<br>Message:$message</div>";
 		}
 ?>
  
@@ -46,7 +49,8 @@ function showForm($conn)
 	{ 
  $self = htmlentities($_SERVER['PHP_SELF']);
 echo("<form action = '$self' method='POST'><br>");
-
+echo"<fieldset>
+		<legend >Message</legend>";
 $sql = "SELECT username FROM usermac";
 $result = $conn->query($sql); 
  $i=1.0;
@@ -73,13 +77,14 @@ if ($result->num_rows > 0) {
 	 
 }
  
-	 echo "</select>";
+	 echo "</select><br><br>";
 	 
-	 echo"<input name='update' type='submit' ><br><br>";
+	 echo"<input id='myButton1' name='update' type='submit' ><br><br>";
 	 
 	
 	 
 	} 
+	echo"</fieldset>";
 	echo "</form>";
 		
 ?>

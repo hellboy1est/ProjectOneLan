@@ -2,6 +2,8 @@
 <html>
 <head>
 <title>Welcome User</title>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" type="text/css" href="cssStyles.css">
 </head>
 <body>
 
@@ -27,7 +29,7 @@ if ($result->num_rows > 0) {
 	
      // output data of each row
      while($row = $result->fetch_assoc()) {
-         echo "<br><b>Message:</b> <i>". $row["message"]. "</i><br><b>Username:</b> <i>". $row["name"].  "</i><br>";
+         echo "<div id='known'>Message:</div><u><div id='known'>". $row["message"]. "</u></div><br><div id='known'>Username:</div><u><div id='known'>". $row["name"].  "</u></div><br>";
      }
 } else {
      echo "0 results";
