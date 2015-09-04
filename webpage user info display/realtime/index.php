@@ -29,7 +29,7 @@
 	</script>
 </head>
 <body>
-	<h1>This is a demo for post <a href="http://blog.codebusters.pl/en/entry/ajax-auto-refresh-volume-ii">Ajax Auto Refresh - Volume II</a></h1>
+	
 	<?php /* Our message container. data-counter should contain initial value of couner from database */ ?>
 	<div id="message-list" data-counter="<?php echo (int)$db->check_changes();?>">
 		<?php echo $db->get_news();?>

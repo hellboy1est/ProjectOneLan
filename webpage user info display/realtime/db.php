@@ -53,7 +53,7 @@ class db{
 	 * @return void
 	 */
 	function check_changes(){
-		$result = $this->db->query('SELECT counting FROM news WHERE id=25');
+		$result = $this->db->query('SELECT counting FROM news WHERE id=33');
 		if($result = $result->fetch_object()){
 			return $result->counting;
 		}
@@ -70,7 +70,7 @@ class db{
 	 * @return voids
 	 */
 	function register_changes(){
-		$this->db->query('UPDATE news SET counting = counting + 1 WHERE id=25');
+		$this->db->query('UPDATE news SET counting = counting + 1 WHERE id=33');
 	}
 
 
