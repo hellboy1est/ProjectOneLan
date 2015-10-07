@@ -28,8 +28,10 @@ namespace BluetoothTutorial
       
         SQLClient sqlClient = new SQLClient("localhost", "getaddress", "root", "");
 
-        List<Device> userDevices=new List<Device>();
-        
+        List<Device> userDevices=new List<Device>();       
+
+        MySqlDataAdapter da = new MySqlDataAdapter();
+
         public Form1()
         {
             InitializeComponent();
@@ -40,48 +42,9 @@ namespace BluetoothTutorial
 
        
         private void btnGo_Click(object sender, EventArgs e)
-        {
-          //  SendData();
-
-
+        {  
             mainProgram();    
-                
-                //if (b == "08FC88541032")
-                //{
-                //    //only last address gets stored? needs all to check
-                //    label3.Text += "Rahul";
-                //  //  MessageBox.Show("Hello Rahul ");
-                //}
-                //else if (b == "3C915712CAC1")
-                //{
-                //    //only last address gets stored? needs all to check
-                //    label3.Text += "John";
-                //  //  MessageBox.Show("Hello John ");
-                //}
-                //else if(b=="E899C4127E5F")
-                //{
-                //    label3.Text += "Elvis";
-                //   // MessageBox.Show("Hello Elvis ");
-                //} 
-                 
-                //SelectBluetoothDeviceDialog sbdd = new SelectBluetoothDeviceDialog();         
-                //sbdd.ShowUnknown = true;
-                //sbdd.ShowRemembered = true;
-                //sbdd.ShowAuthenticated = true;
-
-
-                //if (sbdd.ShowDialog() == DialogResult.OK)
-                //{
-                //    tbOutput.AppendText("Device Name: "+ sbdd.SelectedDevice.DeviceName+"\r\n");
-                //    tbOutput.AppendText("Device Address: " + sbdd.SelectedDevice.DeviceAddress.ToString() + "\r\n");
-                ////////////    tbOutput.AppendText("Remembered: " + sbdd.ShowRemembered.ToString() + "\r\n");
-                //    tbOutput.AppendText("Last Used: " + sbdd.SelectedDevice.LastUsed.ToString()+ "\r\n");
-                //    tbOutput.AppendText("Last Seen: " + sbdd.SelectedDevice.LastSeen.ToString()+"\r\n");
-                //    tbOutput.AppendText("Connected: " + sbdd.SelectedDevice.Connected.ToString());
-                //}
-
-             
-            }
+        }
         
        
         private void progressBar()
@@ -92,29 +55,56 @@ namespace BluetoothTutorial
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+           //this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+          this.ShowInTaskbar = false;  
            listBox2.Items.Add("NONE");
            listBox1.Items.Add("NONE");
-           InitDeviceList();
-
-
-
-            webBrowser1.DocumentText =
-           "<html><head><meta http-equiv='refresh' content='0; url=https://www.op.ac.nz/hub/' /> </head><body>" +
-
-           "</body></html>";
-             
+           //InitDeviceList(); 
         }
 
         public void InitDeviceList()
-        {
-            userDevices.Add(new Device("Rahul", "08FC88541032"));
-            userDevices.Add(new Device("John", "3C915712CAC1"));
-            userDevices.Add(new Device("Chris", "F06BCA92E623"));
-            userDevices.Add(new Device("Catherine", "00F46FACBD86"));
-            userDevices.Add(new Device("Tanuj", "D40B1AFC74D6"));
-            userDevices.Add(new Device("Paul", "AE3C4666286A"));
-            userDevices.Add(new Device("Vincent", "A4DB30BEBC4E"));
+        { 
+            DataSet myData = new DataSet();
+            MySql.Data.MySqlClient.MySqlConnection conn;
+            MySql.Data.MySqlClient.MySqlCommand cmd;
+            MySql.Data.MySqlClient.MySqlDataAdapter myAdapter;
+
+            conn = new MySql.Data.MySqlClient.MySqlConnection();
+            cmd = new MySql.Data.MySqlClient.MySqlCommand();
+            myAdapter = new MySql.Data.MySqlClient.MySqlDataAdapter();
+
+            conn.ConnectionString = "server=127.0.0.1;uid=root;" +
+              "pwd=;database=getaddress;";
+
+
+            try
+            {
+                cmd.CommandText = "SELECT address,username FROM usermac";
+                cmd.Connection = conn;
+
+                myAdapter.SelectCommand = cmd;
+                myAdapter.Fill(myData);
+
+                foreach (DataTable table in myData.Tables)
+                {
+                    foreach (DataRow row in table.Rows)
+                    { // read item
+                        //  MessageBox.Show(item.ToString());
+                        var a = row[1].ToString();
+                        var b = row[0].ToString();
+                        // MessageBox.Show(a.ToString());
+                        userDevices.Add(new Device(a, b));
+                        
+                    }
+                }
+                //writes in xml file 
+                //  myData.WriteXml(@"D:\dataset.xml", XmlWriteMode.WriteSchema);
+            }
+            catch (MySql.Data.MySqlClient.MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Report could not be created",
+                MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -140,7 +130,9 @@ namespace BluetoothTutorial
 
         private void mainProgram()
         {
-           
+            userDevices.Clear();
+            InitDeviceList(); 
+
             //Auto run method
             if (radioButton1.Checked == true)
             {
@@ -166,7 +158,8 @@ namespace BluetoothTutorial
             //Drops known user table
             sqlClient.Drop("tblknown");
             //Creates known user table
-            sqlClient.Create("tblknown", "id int NOT NULL AUTO_INCREMENT, name varchar(255),PRIMARY KEY (id)");
+            sqlClient.Create("tblknown", "id int NOT NULL AUTO_INCREMENT, name varchar(255),counting int NOT NULL ,PRIMARY KEY (id)");
+          
 
             string a = "dadasd";
             string b = "";
@@ -188,21 +181,18 @@ namespace BluetoothTutorial
 
                         //adds '' to string,so sql can accept as a char
                         string knownuser = "'" + username.Replace(",", "','") + "'";
-
                      
                         listBox1.Items.Add(userDevices[j].UserName);
                         
                         sqlClient.Insert("tblknown", "name", knownuser);
+                        sqlClient.Update("tblknown", "counting =counting+1", "id=1"); 
                     }
                     
-                }
-              
-             
-                number++;
-                    
+                } 
+                number++; 
             }
-
-            WelcomeMessage();   
+             
+         //   WelcomeMessage();   
             progressBar1.Value = 100;
             label1.Text = "Total Devices: " + devices.Length;
             timer1.Start();
@@ -212,89 +202,19 @@ namespace BluetoothTutorial
         {
             if (radioButton1.Checked == true)
             {
-                timer1.Start();
-                
+                timer1.Start();                
                 
             }
             else
             {
-                timer1.Stop();
-                
+                timer1.Stop();                
             }
         }
 
-        private void webBrowser1_Navigating(object sender, WebBrowserNavigatingEventArgs e)
-        {
-           
-        }
+     }
 
-        private void WelcomeMessage()
-        {
+}  
 
-            if (listBox1.Items.Count > 0)
-            {
-                // It contains items
-                
-                if (listBox1.Items.Contains("Rahul"))
-                {                     
-                    webBrowser1.DocumentText =
-                          "<html><head><meta http-equiv='refresh' content='0; url=http://webdev.ict.op.ac.nz/kakkr1/web3Final/' /> </head><body>" +
-                          "</body></html>";
-
-                }
-                //else if (listBox1.Items.Contains("John"))                 
-                //{
-                //    webBrowser1.DocumentText =
-                //             "<html><body>" +
-                //             "<h1>Welcome John</h1>" +
-                //             "</body></html>";
-                      
-                //}
-                else if (listBox1.Items.Contains("Tanuj"))
-                {
-                    webBrowser1.DocumentText =
-                             "<html><body>" +
-                             "<h1>Welcome Tanuj</h1>" +
-                             "</body></html>";
-
-                }
-                else
-                {
-                    // It doesn't
-
-                    webBrowser1.DocumentText =
-                                "<html><head><meta http-equiv='refresh' content='0; url=https://www.op.ac.nz/hub/' /></head><body>" +
-
-                                "</body></html>";
-                }
-
-            }
-            else
-            {
-                // It doesn't
-
-                webBrowser1.DocumentText =
-                            "<html><head><meta http-equiv='refresh' content='0; url=https://www.op.ac.nz/hub/' /></head><body>" +
-
-                            "</body></html>";
-            }
-            
-
-        }
-        private void SendData()
-        {
-            System.Net.WebClient wc = new System.Net.WebClient();
-            string webData = wc.DownloadString("http://kate.ict.op.ac.nz/~kakkr1/Assignment2/add.html");
-            
-            MessageBox.Show(webData);
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+       
  
- 
-    }
-}
+  
