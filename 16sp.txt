@@ -1,0 +1,18 @@
+installing on linux,
+pache,php
+
+trying to run bluetooth ap on linux
+
+installung on linux-XAMPP is the most popular PHP development environment
+
+XAMPP is a completely free, easy to install Apache distribution containing MySQL, PHP, and Perl. The XAMPP open source package has been set up to be incredibly easy to install and to use.
+
+./Xampp
+
+Mono Migration Analyzer
+
+Adaptive Frequency Hopping -bluetooth interfearence with wlan, works fine with ethernet connection
+
+Store value in a variable after using select statement
+
+Learn about data reader
