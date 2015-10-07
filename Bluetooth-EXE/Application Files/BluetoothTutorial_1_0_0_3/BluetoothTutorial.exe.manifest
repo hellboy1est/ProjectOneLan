@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="BluetoothTutorial.exe" version="1.0.0.3" publicKeyToken="90ae8d4e684595da" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="BluetoothTutorial" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="BluetoothTutorial.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BluetoothTutorial.exe" size="19456">
+      <assemblyIdentity name="BluetoothTutorial" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>qGV120471hasRamOmVLESeFk7yc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="InTheHand.Net.Personal.dll" size="431616">
+      <assemblyIdentity name="InTheHand.Net.Personal" version="3.5.605.0" publicKeyToken="EA38CAA273134499" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>d0GsnFr3Pk0TW5+uBgMXhOTs5JU=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="391873">
+      <assemblyIdentity name="MySql.Data" version="6.6.5.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>tXRAAmVfAa6Jb2S9kfgkqru9yUQ=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+<publisherIdentity name="CN=RAHUL\Rl" issuerKeyHash="30a4d204ca2c13e0ea50551cf2bf5f8d94ce6e60" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>oSZyg3ggcEKWb2aQTpPVUmrgMAo=</DigestValue></Reference></SignedInfo><SignatureValue>WkLEVDquHRLSF0rcy6Nvfsy2MIdSSfpOcVx/YBXLgpfE9rgBR21Y/V3aAbRZmv0LMTQVt4G0du9pfWNS6tw0k8ULhesFVzu3znlt2GC8qBFrsvWgYHC/vgzjwhnJeeSL8GoWJvrvdj8FSNuz1XQXSzl7hENpVsw/eVtQscnt/FA=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>r/0heK3mA2K++gsnz+RDnD25fLHkcmVQDLz92jz7Iy+oEuLLTpey8FJGo8gK0KFvz7hxlDePIqG6HohD0eQXdfvxOIsP2epf6mDrS1SFplkw0hOZMkhJmxZdn0rwvLo2KYnmhqUt4AWaCdIfLDXTGdtanIb3RkHIdNX0xnWl6MU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="0a30e06a52d5934e90666f9642702078837226a1" Description="" Url=""><as:assemblyIdentity name="BluetoothTutorial.exe" version="1.0.0.3" publicKeyToken="90ae8d4e684595da" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=RAHUL\Rl</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>UAfN2p5iC4hLPqaQtmtvLaxVHJ4=</DigestValue></Reference></SignedInfo><SignatureValue>WhCjKMiwQBW7C5zsuwdFfI1hFFQAxKzVx1GOgxNGMCPy5PwlQurmxXxcXGcib4zkWn0OabvO5xypMx2XGNRhrXApugV9xYPZ5xkSzSFpNF5XYRxcC6TrYXuCzfiPyhNHUbaXkB8afYIHdIalngJUv4bJg6sryxOO3FqXoiheESc=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>r/0heK3mA2K++gsnz+RDnD25fLHkcmVQDLz92jz7Iy+oEuLLTpey8FJGo8gK0KFvz7hxlDePIqG6HohD0eQXdfvxOIsP2epf6mDrS1SFplkw0hOZMkhJmxZdn0rwvLo2KYnmhqUt4AWaCdIfLDXTGdtanIb3RkHIdNX0xnWl6MU=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBuTCCASKgAwIBAgIQHdO5G/w8xp9HUZsfqGda1jANBgkqhkiG9w0BAQUFADAbMRkwFwYDVQQDHhAAUgBBAEgAVQBMAFwAUgBsMB4XDTE1MDkxNjExMzgwNVoXDTE2MDkxNTE3MzgwNVowGzEZMBcGA1UEAx4QAFIAQQBIAFUATABcAFIAbDCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAr/0heK3mA2K++gsnz+RDnD25fLHkcmVQDLz92jz7Iy+oEuLLTpey8FJGo8gK0KFvz7hxlDePIqG6HohD0eQXdfvxOIsP2epf6mDrS1SFplkw0hOZMkhJmxZdn0rwvLo2KYnmhqUt4AWaCdIfLDXTGdtanIb3RkHIdNX0xnWl6MUCAwEAATANBgkqhkiG9w0BAQUFAAOBgQACXOE1ZnBVVr6YQRJHyvr5MEWr8Z5Fwg9rXDE/NpJk4E0/NXWK4MKwCvdF/fksCOqdPaFMpdFswt6jazK9IhpUGIaR/UCauQegS9O6YwHQc9nYn2P5ErKbeTj3e2+qDu7viUIomyVvtfRFDLcYWx1SJRVx2zg71+6IA1J39CvWsQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
