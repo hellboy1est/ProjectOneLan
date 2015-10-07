@@ -1,0 +1,5 @@
+.net app automatically retrieves users from sqldatabase
+
+Control.OnKeyPress Method (KeyPressEventArgs)
+
+if app is running, add new user is added, app has to reload in order to display known user(maybe form_load??fix this)
