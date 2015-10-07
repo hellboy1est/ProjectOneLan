@@ -20,7 +20,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
      die("Connection failed: " . $conn->connect_error);
 } 
-if (isset($_POST['update']))
+		if (isset($_POST['update']))
 		{
      		processForm($conn);
 			
@@ -33,12 +33,13 @@ if (isset($_POST['update']))
 		{
 			$name=$_POST['user'];
 			$message=$_POST['message'];
-			 
 			
-			// update data in mysql database 
-$sql="UPDATE usermac SET message='$message' WHERE username='$name'" or die ("this");
-$result=mysqli_query($conn,$sql) or die ("this stuffedup");
-		echo"<div id='myButton1'>Message added for:$name<br>Message:$message</div>";
+			$stripmessage=strip_tags($message);
+			$messagefresh=preg_replace('/[^A-Za-z0-9_ -\.]/', '', $stripmessage);
+					// update data in mysql database 
+		$sql="UPDATE usermac SET message='$messagefresh' WHERE username='$name'" or die ("this");
+		$result=mysqli_query($conn,$sql) or die ("this stuffedup");
+		echo "$messagefresh added for $name";
 		}
 ?>
  

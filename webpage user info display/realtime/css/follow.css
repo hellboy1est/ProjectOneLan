@@ -1,0 +1,153 @@
+ .navbar-default {
+  background-color: #0fbce1;
+  border-color: #42696b;
+}
+.navbar-default .navbar-brand {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  color: #b66f88;
+}
+.navbar-default .navbar-text {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: #b66f88;
+}
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+  color: #b66f88;
+  background-color: #42696b;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  color: #b66f88;
+  background-color: #42696b;
+}
+.navbar-default .navbar-toggle {
+  border-color: #42696b;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+  background-color: #42696b;
+}
+.navbar-default .navbar-toggle .icon-bar {
+  background-color: #ecf0f1;
+}
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+  border-color: #ecf0f1;
+}
+.navbar-default .navbar-link {
+  color: #ecf0f1;
+}
+.navbar-default .navbar-link:hover {
+  color: #b66f88;
+}
+
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #ecf0f1;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #b66f88;
+  }
+  .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #b66f88;
+    background-color: #42696b;
+  }
+}
+
+.containerR 
+ {
+ height:315px;
+ width:560px;
+  width: 50%;
+    margin: 0 auto;
+	background-color:transparent
+ } body
+ {
+ 
+background-color: rgb(91,78,78);
+}
+
+  #aa:hover:after {
+    content: url(image/circle.PNG); /* no need for qoutes */
+    display: block;
+}
+  
+  #aa:hover {
+    position: relative;
+}
+#aa:hover:after {
+    content: url(images/punjab.jpg); /* no need for qoutes */
+    display: block;
+    position: absolute;
+    left: -70px; /* change this value to one that suits you */
+    top: 46px; /* change this value to one that suits you */
+} 
+#fb {
+width:450px;
+margin-left: auto ;
+  margin-right: auto ;}
+ 
+ #fab {
+width:630px;
+margin-left: auto ;
+  margin-right: auto ;
+  } 
+
+  
+  #middle{
+  width:160px;
+  margin-left: auto ;
+  margin-right: auto ;}
+
+
+#middle1{
+  width:30px;
+  margin-left: auto ;
+  margin-right: auto ;}
+     
+	#face {
+width:150px;
+position: absolute;
+	}
+  
+   #blueRectangle{
+width:133px;
+height: 51px;
+background-color: rgba(25, 26, 20, 0.7 );
+border: 2px blue;
+position: absolute;
+-webkit-transition:all 2.5s ease 0s;
+	}
+  
+	#blueRectangle:hover{
+margin-left:-300px;
+width:800px;
+height: 600px;
+background-image:url(../images/connect.gif);
+opacity: 0.8;
+background-color:#3b5998;
+position: absolute;
+z-index: 10;	/* z-index lets image overlap div  */
+	}
+  .image img {
+  
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+
+.image:hover img {
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+.thumbnail{background-color:}
+.navbar{background-color:}

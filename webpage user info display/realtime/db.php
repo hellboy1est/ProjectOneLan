@@ -53,7 +53,7 @@ class db{
 	 * @return void
 	 */
 	function check_changes(){
-		$result = $this->db->query('SELECT counting FROM news WHERE id=33');
+		$result = $this->db->query('SELECT counting FROM tblknown WHERE id=1');
 		if($result = $result->fetch_object()){
 			return $result->counting;
 		}
@@ -80,12 +80,13 @@ class db{
 	 * Get list of news
 	 *
 	 * @return void
+	 SELECT * FROM news WHERE id<>1 ORDER BY add_date DESC LIMIT 50
 	 */
 	function get_news(){
-		if($result = $this->db->query('SELECT * FROM news WHERE id<>1 ORDER BY add_date DESC LIMIT 50')){
+		if($result = $this->db->query('SELECT usermac.message,tblknown.name FROM usermac JOIN tblknown ON usermac.username = tblknown.name WHERE tblknown.id<>0' )){
 			$return = '';
 			while($r = $result->fetch_object()){
-				$return .= '<p>id: '.$r->id.' | '.htmlspecialchars($r->title).'</p>';
+				$return .= '<p>Name: '.$r->name.' | '.htmlspecialchars($r->message).'</p>';
 				$return .= '<hr/>';
 			}
 			return $return;
