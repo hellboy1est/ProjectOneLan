@@ -1,0 +1,7 @@
+{
+  "name": "BlueTooth",
+  "version": "1.0.0",
+  "dependencies": {
+    "bluetooth-scanner": "^1.0.1"
+  }
+}

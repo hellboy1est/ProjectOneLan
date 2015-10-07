@@ -1,0 +1,962 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>MoMA Scan Results</title>
+<link rel="stylesheet" type="text/css" href="Media/moma.css" />
+<script type="text/ecmascript" src="Media/moma.js"></script>
+</head>
+<body>
+    <div class='header'>
+        <div class='headertext'>MoMA Scan Results</div>
+    </div>
+    <div class='wrapper'>
+    <div class='legend'>
+      <div>
+        Scan Date: 18-09-2015 3.18.55 PM<br/>
+        MoMA Definitions: Mono 2.8 (4.0 Profile)<br/><br/>
+        For descriptions of issues, see <a href='http://www.mono-project.com/MoMA_-_Issue_Descriptions'>MoMA Issue Descriptions</a>.
+      </div>
+    </div>
+    <table class='results-table'>
+      <thead>
+        <tr>
+          <th scope='col'></th>
+          <th scope='col'></th>
+          <th scope='col'>Assembly</th>
+          <th scope='col'>Version</th>
+          <th scope='col'>Missing</th>
+          <th scope='col'>Not Implemented</th>
+          <th scope='col'>Todo</th>
+          <th scope='col'>P/Invoke</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='errorrow' onclick='toggle("el1", "img1")'>
+          <td style='width: 10px'><img id='img1' src='Media/plus.png' /></td>
+          <td style='width: 16px'><img src='Media/fail.png' /></td>
+          <td>InTheHand.Net.Personal.dll</td>
+          <td>3.5.605.0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>178</td>
+        </tr>
+        <tr id='el1' class='errorlist' style='display: none'>
+          <td></td>
+          <td colspan='7'>
+            <table cellpadding='2' cellspacing='0' width='100%' class='inner-results'>
+              <tr class='inner-header'>
+              <td>Calling Method</td>
+              <td>P/Invoke Method</td>
+              <td>P/Invoke Library</td>
+              </tr>
+              <tr>
+              <td>void ReadVersionInfo (IntPtr, LmpVersion&, Int32&, HciVersion&, Int32&)</td>
+              <td>bool NativeMethods.DeviceIoControl (IntPtr, uint, IntPtr, int, Byte[], int, Int32&, IntPtr)</td>
+              <td>kernel32.dll</td>
+              </tr>
+              <tr>
+              <td>IBluetoothRadio GetPrimaryRadio ()</td>
+              <td>IntPtr NativeMethods.BluetoothFindFirstRadio (BLUETOOTH_FIND_RADIO_PARAMS&, IntPtr&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>IBluetoothRadio GetPrimaryRadio ()</td>
+              <td>bool NativeMethods.BluetoothFindRadioClose (IntPtr)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>IBluetoothRadio[] get_AllRadios ()</td>
+              <td>IntPtr NativeMethods.BluetoothFindFirstRadio (BLUETOOTH_FIND_RADIO_PARAMS&, IntPtr&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>IBluetoothRadio[] get_AllRadios ()</td>
+              <td>bool NativeMethods.BluetoothFindNextRadio (IntPtr, IntPtr&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>IBluetoothRadio[] get_AllRadios ()</td>
+              <td>bool NativeMethods.BluetoothFindRadioClose (IntPtr)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>HardwareStatus get_HardwareStatus ()</td>
+              <td>int NativeMethods.BluetoothGetRadioInfo (IntPtr, BLUETOOTH_RADIO_INFO&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>RadioMode get_Mode ()</td>
+              <td>bool NativeMethods.BluetoothIsDiscoverable (IntPtr)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>RadioMode get_Mode ()</td>
+              <td>bool NativeMethods.BluetoothIsConnectable (IntPtr)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void set_Mode (RadioMode)</td>
+              <td>bool NativeMethods.BluetoothEnableIncomingConnections (IntPtr, bool)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void set_Mode (RadioMode)</td>
+              <td>bool NativeMethods.BluetoothEnableDiscovery (IntPtr, bool)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void set_Mode (RadioMode)</td>
+              <td>bool NativeMethods.BluetoothEnableDiscovery (IntPtr, bool)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void set_Mode (RadioMode)</td>
+              <td>bool NativeMethods.BluetoothEnableIncomingConnections (IntPtr, bool)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void set_Mode (RadioMode)</td>
+              <td>bool NativeMethods.BluetoothEnableDiscovery (IntPtr, bool)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void set_Mode (RadioMode)</td>
+              <td>bool NativeMethods.BluetoothEnableIncomingConnections (IntPtr, bool)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void set_Name (string)</td>
+              <td>bool NativeMethods.DeviceIoControl (IntPtr, uint, Int64&, int, IntPtr, int, Int32&, IntPtr)</td>
+              <td>kernel32.dll</td>
+              </tr>
+              <tr>
+              <td>string GetRadioRegKey (BluetoothAddress)</td>
+              <td>IntPtr NativeMethods.SetupDiGetClassDevs (Guid&, string, IntPtr, NativeMethods/DIGCF)</td>
+              <td>setupapi.dll</td>
+              </tr>
+              <tr>
+              <td>string GetRadioRegKey (BluetoothAddress)</td>
+              <td>bool NativeMethods.SetupDiEnumDeviceInfo (IntPtr, uint, NativeMethods/SP_DEVINFO_DATA&)</td>
+              <td>setupapi.dll</td>
+              </tr>
+              <tr>
+              <td>string GetRadioRegKey (BluetoothAddress)</td>
+              <td>bool NativeMethods.SetupDiDestroyDeviceInfoList (IntPtr)</td>
+              <td>setupapi.dll</td>
+              </tr>
+              <tr>
+              <td>string DevInstanceId (IntPtr, NativeMethods/SP_DEVINFO_DATA)</td>
+              <td>bool NativeMethods.SetupDiGetDeviceInstanceId (IntPtr, NativeMethods/SP_DEVINFO_DATA&, StringBuilder, int, Int32&)</td>
+              <td>setupapi.dll</td>
+              </tr>
+              <tr>
+              <td>void .ctor (IntPtr)</td>
+              <td>int NativeMethods.BluetoothGetRadioInfo (IntPtr, BLUETOOTH_RADIO_INFO&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void Create ()</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapConn_Create (IntPtr&, WidcommRfcommPort/NativeBits/RfcommPort_DataReceivedCallbackDelegate, WidcommL2CapClient/L2CapConn_EventReceivedCallbackDelegate)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE OpenClient (int, Byte[])</td>
+              <td>bool WidcommL2CapClient/NativeMethods.L2CapConn_Connect (IntPtr, IntPtr, Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE OpenServer (int)</td>
+              <td>bool WidcommL2CapClient/NativeMethods.L2CapConn_Listen (IntPtr, IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Accept ()</td>
+              <td>bool WidcommL2CapClient/NativeMethods.L2CapConn_Accept (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE Write (Byte[], UInt16, UInt16&)</td>
+              <td>bool WidcommL2CapClient/NativeMethods.L2CapConn_Write (IntPtr, Byte[], UInt16, UInt16&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool IsConnected (BluetoothAddress&)</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapConn_GetRemoteBdAddr (IntPtr, Byte[], int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE Close ()</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapConn_Disconnect (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Destroy ()</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapConn_Destroy (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>int GetMtu ()</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapConn_GetProperties (IntPtr, Boolean&, UInt16&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool btUnregister (IntPtr)</td>
+              <td>bool BluetoothWin32Events/UnsafeNativeMethods.UnregisterDeviceNotification (IntPtr)</td>
+              <td>User32.dll</td>
+              </tr>
+              <tr>
+              <td>void btRegister (IntPtr)</td>
+              <td>BluetoothWin32Events/RegisterDeviceNotificationSafeHandle BluetoothWin32Events/UnsafeNativeMethods.RegisterDeviceNotification_SafeHandle (IntPtr, BluetoothWin32Events/DEV_BROADCAST_HANDLE&, BluetoothWin32Events/RegisterDeviceNotificationFlags)</td>
+              <td>User32.dll</td>
+              </tr>
+              <tr>
+              <td>Int32[] Hack_GetPorts ()</td>
+              <td>void SdpDiscoveryRecordsBuffer/NativeMethods.SdpDiscoveryRec_GetRfcommPorts (IntPtr, int, Int32[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>Int32[] Hack_GetPsms ()</td>
+              <td>void SdpDiscoveryRecordsBuffer/NativeMethods.SdpDiscoveryRec_GetL2CapPsms (IntPtr, int, Int32[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>SdpDiscoveryRecordsBufferBase/SimpleInfo[] GetSimpleInfo ()</td>
+              <td>void SdpDiscoveryRecordsBuffer/NativeMethods.SdpDiscoveryRec_GetSimpleInfo (IntPtr, int, IntPtr, int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Dispose (bool)</td>
+              <td>void SdpDiscoveryRecordsBuffer/NativeMethods.SdpDiscoveryRec_DeleteArray (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void GetDeviceInfo ()</td>
+              <td>int NativeMethods.BluetoothGetDeviceInfo (IntPtr, BLUETOOTH_DEVICE_INFO&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void Update ()</td>
+              <td>int NativeMethods.BluetoothUpdateDeviceRecord (BLUETOOTH_DEVICE_INFO&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>Guid[] get_InstalledServices ()</td>
+              <td>int NativeMethods.BluetoothEnumerateInstalledServices (IntPtr, BLUETOOTH_DEVICE_INFO&, Int32&, Byte[])</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>Guid[] get_InstalledServices ()</td>
+              <td>int NativeMethods.BluetoothEnumerateInstalledServices (IntPtr, BLUETOOTH_DEVICE_INFO&, Int32&, Byte[])</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void SetServiceState (Guid, bool, bool)</td>
+              <td>int NativeMethods.BluetoothSetServiceState (IntPtr, BLUETOOTH_DEVICE_INFO&, Guid&, int)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>Byte[][] GetServiceRecordsUnparsedWindowsRaw (Guid)</td>
+              <td>int NativeMethods.WSALookupServiceBegin (WSAQUERYSET&, LookupFlags, IntPtr&)</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>Byte[][] GetServiceRecordsUnparsedWindowsRaw (Guid)</td>
+              <td>int NativeMethods.WSALookupServiceNext (IntPtr, LookupFlags, Int32&, Byte[])</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>Byte[][] GetServiceRecordsUnparsedWindowsRaw (Guid)</td>
+              <td>int NativeMethods.WSALookupServiceEnd (IntPtr)</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>void ReadVersionsInfo ()</td>
+              <td>bool NativeMethods.DeviceIoControl (IntPtr, uint, Int64&, int, BTH_RADIO_INFO&, int, Int32&, IntPtr)</td>
+              <td>kernel32.dll</td>
+              </tr>
+              <tr>
+              <td>void ShowDialog ()</td>
+              <td>bool NativeMethods.BluetoothDisplayDeviceProperties (IntPtr, BLUETOOTH_DEVICE_INFO&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void Create ()</td>
+              <td>IntPtr WidcommRfcommPort/NativeMethods.RfcommPort_Create (IntPtr&, WidcommRfcommPort/NativeBits/RfcommPort_DataReceivedCallbackDelegate, WidcommRfcommPort/NativeBits/RfcommPort_EventReceivedCallbackDelegate)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE OpenClient (int, Byte[])</td>
+              <td>PORT_RETURN_CODE WidcommRfcommPort/NativeMethods.RfcommPort_OpenClient (IntPtr, int, Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE OpenServer (int)</td>
+              <td>PORT_RETURN_CODE WidcommRfcommPort/NativeMethods.RfcommPort_OpenServer (IntPtr, int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE Write (Byte[], UInt16, UInt16&)</td>
+              <td>PORT_RETURN_CODE WidcommRfcommPort/NativeMethods.RfcommPort_Write (IntPtr, Byte[], UInt16, UInt16&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool IsConnected (BluetoothAddress&)</td>
+              <td>bool WidcommRfcommPort/NativeMethods.RfcommPort_IsConnected (IntPtr, Byte[], int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>PORT_RETURN_CODE Close ()</td>
+              <td>PORT_RETURN_CODE WidcommRfcommPort/NativeMethods.RfcommPort_Close (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Destroy ()</td>
+              <td>void WidcommRfcommPort/NativeMethods.RfcommPort_Destroy (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool RunDialogMsft (IntPtr)</td>
+              <td>bool NativeMethods.BluetoothSelectDevices (BLUETOOTH_SELECT_DEVICE_PARAMS&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>bool RunDialogMsft (IntPtr)</td>
+              <td>bool NativeMethods.BluetoothSelectDevicesFree (BLUETOOTH_SELECT_DEVICE_PARAMS&)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>bool ReleaseHandle ()</td>
+              <td>int NativeMethods.sdp_close (IntPtr)</td>
+              <td>bluetooth</td>
+              </tr>
+              <tr>
+              <td>bool PairRequest (BluetoothAddress, string)</td>
+              <td>int NativeMethods.BluetoothAuthenticateDevice (IntPtr, IntPtr, BLUETOOTH_DEVICE_INFO&, string, int)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>bool PairRequest (BluetoothAddress, BluetoothAuthenticationRequirements)</td>
+              <td>int NativeMethods.BluetoothAuthenticateDeviceEx (IntPtr, IntPtr, BLUETOOTH_DEVICE_INFO&, Byte[], BluetoothAuthenticationRequirements)</td>
+              <td>bthprops.cpl</td>
+              </tr>
+              <tr>
+              <td>bool RemoveDevice (BluetoothAddress)</td>
+              <td>int NativeMethods.BluetoothRemoveDevice (Byte[])</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_Init ()</td>
+              <td>BtSdkError NativeMethods.Btsdk_Init ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>bool InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_IsSDKInitialized ()</td>
+              <td>bool NativeMethods.Btsdk_IsSDKInitialized ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>bool InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_IsServerConnected ()</td>
+              <td>bool NativeMethods.Btsdk_IsServerConnected ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_Done ()</td>
+              <td>BtSdkError NativeMethods.Btsdk_Done ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_RegisterGetStatusInfoCB4ThirdParty (NativeMethods/Func_ReceiveBluetoothStatusInfo&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_RegisterGetStatusInfoCB4ThirdParty (NativeMethods/Func_ReceiveBluetoothStatusInfo)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_RegisterCallback4ThirdParty (Structs/BtSdkCallbackStru&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_RegisterCallback4ThirdParty (Structs/BtSdkCallbackStru&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_SetStatusInfoFlag (UInt16)</td>
+              <td>BtSdkError NativeMethods.Btsdk_SetStatusInfoFlag (UInt16)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>void InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_FreeMemory (IntPtr)</td>
+              <td>void NativeMethods.Btsdk_FreeMemory (IntPtr)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_StartBluetooth ()</td>
+              <td>BtSdkError NativeMethods.Btsdk_StartBluetooth ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_StopBluetooth ()</td>
+              <td>BtSdkError NativeMethods.Btsdk_StopBluetooth ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>bool InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_IsBluetoothReady ()</td>
+              <td>bool NativeMethods.Btsdk_IsBluetoothReady ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>bool InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_IsBluetoothHardwareExisted ()</td>
+              <td>bool NativeMethods.Btsdk_IsBluetoothHardwareExisted ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_SetDiscoveryMode (StackConsts/DiscoveryMode)</td>
+              <td>BtSdkError NativeMethods.Btsdk_SetDiscoveryMode (StackConsts/DiscoveryMode)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetDiscoveryMode (StackConsts/DiscoveryMode&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetDiscoveryMode (StackConsts/DiscoveryMode&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetLocalDeviceAddress (Byte[])</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetLocalDeviceAddress (Byte[])</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetLocalName (Byte[], UInt16&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetLocalName (Byte[], UInt16&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetLocalDeviceClass (UInt32&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetLocalDeviceClass (UInt32&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetLocalLMPInfo (Structs/BtSdkLocalLMPInfoStru&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetLocalLMPInfo (Structs/BtSdkLocalLMPInfoStru&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_StartDeviceDiscovery (uint, UInt16, UInt16)</td>
+              <td>BtSdkError NativeMethods.Btsdk_StartDeviceDiscovery (uint, UInt16, UInt16)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_StopDeviceDiscovery ()</td>
+              <td>BtSdkError NativeMethods.Btsdk_StopDeviceDiscovery ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_UpdateRemoteDeviceName (uint, Byte[], UInt16&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_UpdateRemoteDeviceName (uint, Byte[], UInt16&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_IsDevicePaired (uint, Boolean&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_IsDevicePaired (uint, Boolean&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_PairDevice (uint)</td>
+              <td>BtSdkError NativeMethods.Btsdk_PairDevice (uint)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_PinCodeReply (uint, Byte[], UInt16)</td>
+              <td>BtSdkError NativeMethods.Btsdk_PinCodeReply (uint, Byte[], UInt16)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>bool InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_IsDeviceConnected (uint)</td>
+              <td>bool NativeMethods.Btsdk_IsDeviceConnected (uint)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteRSSI (uint, SByte&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetRemoteRSSI (uint, SByte&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteLinkQuality (uint, UInt16&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetRemoteLinkQuality (uint, UInt16&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>uint InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteDeviceHandle (Byte[])</td>
+              <td>uint NativeMethods.Btsdk_GetRemoteDeviceHandle (Byte[])</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>uint InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_AddRemoteDevice (Byte[])</td>
+              <td>uint NativeMethods.Btsdk_AddRemoteDevice (Byte[])</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_DeleteRemoteDeviceByHandle (uint)</td>
+              <td>BtSdkError NativeMethods.Btsdk_DeleteRemoteDeviceByHandle (uint)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>int InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetStoredDevicesByClass (uint, UInt32[], int)</td>
+              <td>int NativeMethods.Btsdk_GetStoredDevicesByClass (uint, UInt32[], int)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteDeviceAddress (uint, Byte[])</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetRemoteDeviceAddress (uint, Byte[])</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteDeviceName (uint, Byte[], UInt16&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetRemoteDeviceName (uint, Byte[], UInt16&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteDeviceClass (uint, UInt32&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetRemoteDeviceClass (uint, UInt32&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteDeviceProperty (uint, Structs/BtSdkRemoteDevicePropertyStru&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetRemoteDeviceProperty (uint, Structs/BtSdkRemoteDevicePropertyStru&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_BrowseRemoteServicesEx (uint, Structs/BtSdkSDPSearchPatternStru[], int, UInt32[], Int32&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_BrowseRemoteServicesEx (uint, Structs/BtSdkSDPSearchPatternStru[], int, UInt32[], Int32&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetRemoteServiceAttributes (uint, Structs/BtSdkRemoteServiceAttrStru&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_GetRemoteServiceAttributes (uint, Structs/BtSdkRemoteServiceAttrStru&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_ConnectEx (uint, UInt16, uint, UInt32&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_ConnectEx (uint, UInt16, uint, UInt32&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_ConnectEx (uint, UInt16, Structs/BtSdkSPPConnParamStru&, UInt32&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_ConnectEx (uint, UInt16, Structs/BtSdkSPPConnParamStru&, UInt32&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>uint InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_StartEnumConnection ()</td>
+              <td>uint NativeMethods.Btsdk_StartEnumConnection ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>uint InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_EnumConnection (uint, Structs/BtSdkConnectionPropertyStru&)</td>
+              <td>uint NativeMethods.Btsdk_EnumConnection (uint, Structs/BtSdkConnectionPropertyStru&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_EndEnumConnection (uint)</td>
+              <td>BtSdkError NativeMethods.Btsdk_EndEnumConnection (uint)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_Disconnect (uint)</td>
+              <td>BtSdkError NativeMethods.Btsdk_Disconnect (uint)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_InitCommObj (byte, UInt16)</td>
+              <td>BtSdkError NativeMethods.Btsdk_InitCommObj (byte, UInt16)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_DeinitCommObj (byte)</td>
+              <td>BtSdkError NativeMethods.Btsdk_DeinitCommObj (byte)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>Int16 InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetClientPort (uint)</td>
+              <td>Int16 NativeMethods.Btsdk_GetClientPort (uint)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_SearchAppExtSPPService (uint, Structs/BtSdkAppExtSPPAttrStru&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_SearchAppExtSPPService (uint, Structs/BtSdkAppExtSPPAttrStru&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>BtSdkError InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_ConnectAppExtSPPService (uint, Structs/BtSdkAppExtSPPAttrStru&, UInt32&)</td>
+              <td>BtSdkError NativeMethods.Btsdk_ConnectAppExtSPPService (uint, Structs/BtSdkAppExtSPPAttrStru&, UInt32&)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>uint InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_CommNumToSerialNum (int)</td>
+              <td>uint NativeMethods.Btsdk_CommNumToSerialNum (int)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>void InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_PlugOutVComm (uint, StackConsts/COMM_SET)</td>
+              <td>void NativeMethods.Btsdk_PlugOutVComm (uint, StackConsts/COMM_SET)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>bool InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_PlugInVComm (uint, UInt32&, uint, StackConsts/COMM_SET, uint)</td>
+              <td>bool NativeMethods.Btsdk_PlugInVComm (uint, UInt32&, uint, StackConsts/COMM_SET, uint)</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>uint InTheHand.Net.Bluetooth.BlueSoleil.IBluesoleilApi.Btsdk_GetASerialNum ()</td>
+              <td>uint NativeMethods.Btsdk_GetASerialNum ()</td>
+              <td>BsSDK</td>
+              </tr>
+              <tr>
+              <td>void Create ()</td>
+              <td>IntPtr WidcommRfCommIf/NativeMethods.RfCommIf_Create (IntPtr&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Destroy (bool)</td>
+              <td>void WidcommRfCommIf/NativeMethods.RfCommIf_Destroy (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool ClientAssignScnValue (Guid, int)</td>
+              <td>bool WidcommRfCommIf/NativeMethods.RfCommIf_Client_AssignScnValue (IntPtr, Guid&, byte)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool SetSecurityLevel (Byte[], BTM_SEC, bool)</td>
+              <td>bool WidcommRfCommIf/NativeMethods.RfCommIf_SetSecurityLevel (IntPtr, Byte[], BTM_SEC, bool)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>int GetScn ()</td>
+              <td>int WidcommRfCommIf/NativeMethods.RfCommIf_GetScn (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Create ()</td>
+              <td>void WidcommBtIf/NativeMethods.BtIf_Create (IntPtr&, WidcommBtIf/NativeMethods/OnDeviceResponded, WidcommBtIf/NativeMethods/OnInquiryComplete, WidcommBtIf/NativeMethods/OnDiscoveryComplete)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void SetCallback2 ()</td>
+              <td>int WidcommBtIf/NativeMethods.BtIf_SetCallback2 (IntPtr, int, WidcommBtIf/NativeMethods/OnStackStatusChange)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Destroy (bool)</td>
+              <td>void WidcommBtIf/NativeMethods.BtIf_Destroy (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>WidcommBtIf/LibraryStatus CheckLibraryDependency (string)</td>
+              <td>IntPtr WidcommBtIf/NativeMethods.GetModuleHandle (string)</td>
+              <td>kernel32.dll</td>
+              </tr>
+              <tr>
+              <td>WidcommBtIf/LibraryStatus CheckLibraryDependency (string)</td>
+              <td>IntPtr WidcommBtIf/NativeMethods.LoadLibraryEx (string, IntPtr, WidcommBtIf/NativeMethods/LoadLibraryExFlags)</td>
+              <td>kernel32.dll</td>
+              </tr>
+              <tr>
+              <td>WidcommBtIf/LibraryStatus CheckLibraryDependency (string)</td>
+              <td>bool WidcommBtIf/NativeMethods.FreeLibrary (IntPtr)</td>
+              <td>kernel32.dll</td>
+              </tr>
+              <tr>
+              <td>bool StartInquiry ()</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_StartInquiry (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void StopInquiry ()</td>
+              <td>void WidcommBtIf/NativeMethods.BtIf_StopInquiry (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool StartDiscovery (BluetoothAddress, Guid)</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_StartDiscovery (IntPtr, Byte[], Guid&, Int32&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>DISCOVERY_RESULT GetLastDiscoveryResult (BluetoothAddress&, UInt16&)</td>
+              <td>DISCOVERY_RESULT WidcommBtIf/NativeMethods.BtIf_GetLastDiscoveryResult (IntPtr, Byte[], UInt16&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>ISdpDiscoveryRecordsBuffer ReadDiscoveryRecords (BluetoothAddress, int, ServiceDiscoveryParams)</td>
+              <td>int WidcommBtIf/NativeMethods.BtIf_ReadDiscoveryRecords (IntPtr, Byte[], int, IntPtr&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>ISdpDiscoveryRecordsBuffer ReadDiscoveryRecords (BluetoothAddress, int, ServiceDiscoveryParams)</td>
+              <td>int WidcommBtIf/NativeMethods.BtIf_ReadDiscoveryRecordsServiceClassOnly (IntPtr, Byte[], int, IntPtr&, Guid&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>ISdpDiscoveryRecordsBuffer ReadDiscoveryRecords (BluetoothAddress, int, ServiceDiscoveryParams)</td>
+              <td>int WidcommBtIf/NativeMethods.BtIf_ReadDiscoveryRecords (IntPtr, Byte[], int, IntPtr&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>ISdpDiscoveryRecordsBuffer ReadDiscoveryRecords (BluetoothAddress, int, ServiceDiscoveryParams)</td>
+              <td>int WidcommBtIf/NativeMethods.BtIf_ReadDiscoveryRecords (IntPtr, Byte[], int, IntPtr&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>REM_DEV_INFO_RETURN_CODE GetRemoteDeviceInfo (REM_DEV_INFO&, IntPtr, int)</td>
+              <td>REM_DEV_INFO_RETURN_CODE WidcommBtIf/NativeMethods.BtIf_GetRemoteDeviceInfo (IntPtr, IntPtr, int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>REM_DEV_INFO_RETURN_CODE GetNextRemoteDeviceInfo (REM_DEV_INFO&, IntPtr, int)</td>
+              <td>REM_DEV_INFO_RETURN_CODE WidcommBtIf/NativeMethods.BtIf_GetNextRemoteDeviceInfo (IntPtr, IntPtr, int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool GetLocalDeviceVersionInfo (DEV_VER_INFO&)</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_GetLocalDeviceVersionInfo (IntPtr, DEV_VER_INFO&, int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool GetLocalDeviceName (Byte[])</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_GetLocalDeviceName (IntPtr, Byte[], int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool GetLocalDeviceInfoBdAddr (Byte[])</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_GetLocalDeviceInfoBdAddr (IntPtr, Byte[], int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void IsStackUpAndRadioReady (Boolean&, Boolean&)</td>
+              <td>void WidcommBtIf/NativeMethods.BtIf_IsStackUpAndRadioReady (IntPtr, Boolean&, Boolean&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void IsDeviceConnectableDiscoverable (Boolean&, Boolean&)</td>
+              <td>void WidcommBtIf/NativeMethods.BtIf_IsDeviceConnectableDiscoverable (IntPtr, Boolean&, Boolean&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>int GetRssi (Byte[])</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_GetConnectionStats (IntPtr, Byte[], tBT_CONN_STATS&, int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool BondQuery (Byte[])</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_BondQuery (IntPtr, Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>BOND_RETURN_CODE Bond (BluetoothAddress, string)</td>
+              <td>int WidcommBtIf/NativeMethods.BtIf_Bond (IntPtr, Byte[], Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool UnBond (BluetoothAddress)</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_UnBond (IntPtr, Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>WBtRc GetExtendedError ()</td>
+              <td>uint WidcommBtIf/NativeMethods.BtIf_GetExtendedError (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>SDK_RETURN_CODE IsRemoteDevicePresent (Byte[])</td>
+              <td>int WidcommBtIf/NativeMethods.BtIf_IsRemoteDevicePresent (IntPtr, Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool IsRemoteDeviceConnected (Byte[])</td>
+              <td>bool WidcommBtIf/NativeMethods.BtIf_IsRemoteDeviceConnected (IntPtr, Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Create ()</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapIf_Create (IntPtr&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Destroy (bool)</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapIf_Deregister (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void Destroy (bool)</td>
+              <td>void WidcommL2CapClient/NativeMethods.L2CapIf_Destroy (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool ClientAssignScnValue (Guid, int)</td>
+              <td>bool WidcommL2CapClient/NativeMethods.L2CapIf_AssignPsmValue (IntPtr, Guid&, UInt16)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool ClientAssignScnValue (Guid, int)</td>
+              <td>UInt16 WidcommL2CapClient/NativeMethods.L2CapIf_GetPsm (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool ClientAssignScnValue (Guid, int)</td>
+              <td>bool WidcommL2CapClient/NativeMethods.L2CapIf_Register (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>bool SetSecurityLevel (Byte[], BTM_SEC, bool)</td>
+              <td>bool WidcommL2CapClient/NativeMethods.L2CapIf_SetSecurityLevel (IntPtr, string, BTM_SEC, bool)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>int GetScn ()</td>
+              <td>UInt16 WidcommL2CapClient/NativeMethods.L2CapIf_GetPsm (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void RemoveService (IntPtr, Byte[])</td>
+              <td>int NativeMethods.WSASetService (WSAQUERYSET&, WSAESETSERVICEOP, int)</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>IntPtr SetService (Byte[], ServiceClass)</td>
+              <td>int NativeMethods.WSASetService (WSAQUERYSET&, WSAESETSERVICEOP, int)</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>void Register (BluetoothAddress)</td>
+              <td>uint NativeMethods.BluetoothRegisterForAuthenticationEx (BLUETOOTH_DEVICE_INFO&, BluetoothAuthenticationRegistrationHandle&, NativeMethods/BluetoothAuthenticationCallbackEx, IntPtr)</td>
+              <td>bthprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void Register (BluetoothAddress)</td>
+              <td>uint NativeMethods.BluetoothRegisterForAuthentication (BLUETOOTH_DEVICE_INFO&, BluetoothAuthenticationRegistrationHandle&, NativeMethods/BluetoothAuthenticationCallback, IntPtr)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void Register (BluetoothAddress)</td>
+              <td>uint NativeMethods.BluetoothRegisterForAuthentication (BLUETOOTH_DEVICE_INFO&, BluetoothAuthenticationRegistrationHandle&, NativeMethods/BluetoothAuthenticationCallback, IntPtr)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>bool NativeCallback (BluetoothAuthenticationMethod, IntPtr, BLUETOOTH_DEVICE_INFO&, bool, BLUETOOTH_AUTHENTICATION_CALLBACK_PARAMS>&)</td>
+              <td>int NativeMethods.BluetoothSendAuthenticationResponse (IntPtr, BLUETOOTH_DEVICE_INFO&, string)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>bool NativeCallback (BluetoothAuthenticationMethod, IntPtr, BLUETOOTH_DEVICE_INFO&, bool, BLUETOOTH_AUTHENTICATION_CALLBACK_PARAMS>&)</td>
+              <td>int NativeMethods.BluetoothSendAuthenticationResponse (IntPtr, BLUETOOTH_DEVICE_INFO&, string)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>int BluetoothSendAuthenticationResponseExPin (BLUETOOTH_DEVICE_INFO&, string)</td>
+              <td>int NativeMethods.BluetoothSendAuthenticationResponseEx (IntPtr, BLUETOOTH_AUTHENTICATE_RESPONSE__PIN_INFO&)</td>
+              <td>bthprops.cpl</td>
+              </tr>
+              <tr>
+              <td>int BluetoothSendAuthenticationResponseExNumCompPasskey (BLUETOOTH_DEVICE_INFO&, Boolean>, BluetoothWin32AuthenticationEventArgs)</td>
+              <td>int NativeMethods.BluetoothSendAuthenticationResponseEx (IntPtr, BLUETOOTH_AUTHENTICATE_RESPONSE__NUMERIC_COMPARISON_PASSKEY_INFO&)</td>
+              <td>bthprops.cpl</td>
+              </tr>
+              <tr>
+              <td>int BluetoothSendAuthenticationResponseExOob (BLUETOOTH_DEVICE_INFO&, Boolean>, BluetoothWin32AuthenticationEventArgs)</td>
+              <td>int NativeMethods.BluetoothSendAuthenticationResponseEx (IntPtr, BLUETOOTH_AUTHENTICATE_RESPONSE__OOB_DATA_INFO&)</td>
+              <td>bthprops.cpl</td>
+              </tr>
+              <tr>
+              <td>bool ReleaseHandle ()</td>
+              <td>bool NativeMethods.BluetoothUnregisterAuthentication (IntPtr)</td>
+              <td>Irprops.cpl</td>
+              </tr>
+              <tr>
+              <td>void <.ctor>b__0 ()</td>
+              <td>void WidcommSppClient/NativeMethods.SppClient_Create (IntPtr&, WidcommSppClient/NativeMethods/OnClientStateChange)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>IBluetoothDeviceInfo[] DoDiscoverDevices (int, bool, bool, bool, bool, BluetoothClient/LiveDiscoveryCallback, Object)</td>
+              <td>int NativeMethods.WSALookupServiceBegin (Byte[], LookupFlags, IntPtr&)</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>IBluetoothDeviceInfo[] DoDiscoverDevices (int, bool, bool, bool, bool, BluetoothClient/LiveDiscoveryCallback, Object)</td>
+              <td>int NativeMethods.WSALookupServiceNext (IntPtr, LookupFlags, Int32&, Byte[])</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>IBluetoothDeviceInfo[] DoDiscoverDevices (int, bool, bool, bool, bool, BluetoothClient/LiveDiscoveryCallback, Object)</td>
+              <td>int NativeMethods.WSALookupServiceEnd (IntPtr)</td>
+              <td>ws2_32.dll</td>
+              </tr>
+              <tr>
+              <td>void Dispose (bool)</td>
+              <td>void SdpService/NativeMethods.SdpService_Destroy (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void InTheHand.Net.Bluetooth.Widcomm.ISdpService.AddServiceClassIdList (Guid>)</td>
+              <td>SdpService/SDP_RETURN_CODE SdpService/NativeMethods.SdpService_AddServiceClassIdList (IntPtr, int, IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void InTheHand.Net.Bluetooth.Widcomm.ISdpService.AddServiceClassIdList (Guid)</td>
+              <td>SdpService/SDP_RETURN_CODE SdpService/NativeMethods.SdpService_AddServiceClassIdList (IntPtr, int, IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void InTheHand.Net.Bluetooth.Widcomm.ISdpService.AddRFCommProtocolDescriptor (byte)</td>
+              <td>SdpService/SDP_RETURN_CODE SdpService/NativeMethods.SdpService_AddRFCommProtocolDescriptor (IntPtr, byte)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void InTheHand.Net.Bluetooth.Widcomm.ISdpService.AddServiceName (string)</td>
+              <td>SdpService/SDP_RETURN_CODE SdpService/NativeMethods.SdpService_AddServiceName (IntPtr, string, IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void InTheHand.Net.Bluetooth.Widcomm.ISdpService.AddAttribute (UInt16, SdpService/DESC_TYPE, int, Byte[])</td>
+              <td>SdpService/SDP_RETURN_CODE SdpService/NativeMethods.SdpService_AddAttribute (IntPtr, UInt16, SdpService/DESC_TYPE, uint, Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void .ctor ()</td>
+              <td>void SdpService/NativeMethods.SdpService_Create (IntPtr&)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>IntPtr sdp_list_append (IntPtr, T, IntPtr>)</td>
+              <td>IntPtr NativeMethods.sdp_list_append (IntPtr, IntPtr)</td>
+              <td>bluetooth</td>
+              </tr>
+              <tr>
+              <td>void <Dispose>b__2 ()</td>
+              <td>void WidcommSppClient/NativeMethods.SppClient_Destroy (IntPtr)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>void <CreatePort>b__6 ()</td>
+              <td>WidcommSppClient/SPP_CLIENT_RETURN_CODE WidcommSppClient/NativeMethods.SppClient_CreateConnection (IntPtr, Byte[], Byte[])</td>
+              <td>32feetWidcomm</td>
+              </tr>
+              <tr>
+              <td>WidcommSppClient/SPP_CLIENT_RETURN_CODE <GetConnectionStats>b__9 ()</td>
+              <td>WidcommSppClient/SPP_CLIENT_RETURN_CODE WidcommSppClient/NativeMethods.SppClient_GetConnectionStats (IntPtr, tBT_CONN_STATS&, int)</td>
+              <td>32feetWidcomm</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr class='tabletotal'>
+          <td></td>
+          <td></td>
+          <td>Totals</td>
+          <td></td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>178</td>
+        </tr>
+      </tfoot>
+    </table>
+</div>
+</body>
+</html>

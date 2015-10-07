@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<!--
+File: api-overview.html
+Description: Evothings supported APIs.
+Author: Mikael Kindborg
+Copyright (c) 2013-2015 Evothings AB
+-->
+<head>
+<meta charset="utf-8">
+<title>Evothings API Overview</title>
+<script src="../js/include-viewport.js"></script>
+<script src="../js/include-css-scripts.js"></script>
+</head>
+
+<body>
+<div class="evo-heading">API Overview</div>
+
+<div class="evo-page"><div class="evo-content">
+
+<script src="../js/include-main-menu.js"></script>
+
+<div class="evo-box evo-content-index">
+	<script src="../js/include-evothings-logo.js"></script>
+	<a href="#Introduction">API Overview</a><br/>
+	<a href="#SupportedPlugins">Supported Plugins</a><br/>
+	<a href="#Libraries">Evothings Libraries</a> (<a class="evo-lib-link" href="../lib-doc/index.html">direct link</a>)<br/>
+</div>
+
+<div id="Introduction" class="evo-box">
+	<h1>API Overview</h1>
+
+	<p>Evothings Client ships with selected Cordova plugins, which are listed below.</p>
+	<p>Evothings also provides a number of JavaScript libraries, some of which are built on top of the Cordova plugins, some which are generic.</p>
+	<p>Below you find the API documentation for plugins and libraries.</p>
+</div>
+
+<div id="SupportedPlugins" class="evo-box">
+	<h2>Supported Plugins</h2>
+
+	<p>The Evothings Client app comes pre-packaged with the following Cordova Plugins:</p>
+	<a href="../plugins/org.apache.cordova.battery-status/index.html" target="_blank">org.apache.cordova.battery-status</a><br />
+	<a href="../plugins/org.apache.cordova.camera/index.html" target="_blank">org.apache.cordova.camera</a><br />
+	<a href="../plugins/org.apache.cordova.console/index.html" target="_blank">org.apache.cordova.console</a><br />
+	<a href="../plugins/org.apache.cordova.device/index.html" target="_blank">org.apache.cordova.device</a><br />
+	<a href="../plugins/org.apache.cordova.device-motion/index.html" target="_blank">org.apache.cordova.device-motion</a><br />
+	<a href="../plugins/org.apache.cordova.device-orientation/index.html" target="_blank">org.apache.cordova.device-orientation</a><br />
+	<a href="../plugins/org.apache.cordova.dialogs/index.html" target="_blank">org.apache.cordova.dialogs</a><br />
+	<a href="../plugins/org.apache.cordova.geolocation/index.html" target="_blank">org.apache.cordova.geolocation</a><br />
+	<a href="../plugins/org.apache.cordova.globalization/index.html" target="_blank">org.apache.cordova.globalization</a><br />
+	<a href="../plugins/org.apache.cordova.inappbrowser/index.html" target="_blank">org.apache.cordova.inappbrowser</a><br />
+	<a href="../plugins/org.apache.cordova.network-information/index.html" target="_blank">org.apache.cordova.network-information</a><br />
+	<a href="../plugins/org.apache.cordova.vibration/index.html" target="_blank">org.apache.cordova.vibration</a><br />
+	<a href="../plugins/developer.chrome.com/apps/system_network" target="_blank">org.chromium.system.network</a><br />
+	<a href="../plugins/developer.chrome.com/apps/socket" target="_blank">org.chromium.socket</a><br />
+	<a href="../plugins/developer.chrome.com/apps/sockets_tcp" target="_blank">org.chromium.sockets.tcp</a><br />
+	<a href="../plugins/developer.chrome.com/apps/sockets_udp" target="_blank">org.chromium.sockets.udp</a><br />
+	<a href="../plugins/com.unarin.cordova.beacon/index.html" target="_blank">com.unarin.cordova.beacon</a><br />
+	<a href="../plugins/pl.makingwaves.estimotebeacons/index.html" target="_blank">pl.makingwaves.estimotebeacons</a><br />
+	<a href="../plugins/de.appplant.cordova.plugin.local-notification/index.html" target="_blank">de.appplant.cordova.plugin.local-notification</a><br />
+	<a href="../plugins/com.megster.cordova.bluetoothserial/index.html" target="_blank">com.megster.cordova.bluetoothserial</a><br />
+	<a href="../plugins/com.evothings.ble/index.html" target="_blank">com.evothings.ble</a><br />
+
+
+	<p>Note that the JavaScript source files for the plugins are packaged into the Evothings Client app. You don't include these files in your HTML code, they are included automatically with cordova.js.</p>
+</div>
+<style>
+code {
+	font-size: 1.2em;
+}
+</style>
+
+<div id="Libraries" class="evo-box">
+	<h2>Evothings JavaScript Libraries</h2>
+
+	<p>The <a class="evo-lib-link" href="../lib-doc/index.html">Evothings JavaScript libraries</a> provide useful functionality for IoT enabled mobile apps.</p>
+
+	<p>These libraries are included using a script tag in the HTML code, or asynchronously using the evothings.loadScript() function.</p>
+
+	<p>Here is an overview of the libraries:</p>
+	<ul>
+		<li><strong>Evothings.js</strong> - <code>evothings/evothings.js</code> contains functions for asynchronous loading of JavaScript files and platform checking functions.</li>
+		<li><strong>EasyBLE</strong> - <code>evothings/easyble/easyble.js</code> contains high-level functions for accessing BLE devices. This library is written on top of the <a href="https://github.com/evothings/cordova-ble">cordova-ble plugin</a>, and asynchronously includes the Util library.</li>
+		<li><strong>Util</strong> - <code>evothings/util/util.js</code> contains functions for parsing numbers encoded as binary data. This library is used by the EasyBLE library.</li>
+		<li><strong>TISensorTag</strong> - <code>evothings/tisensortag/tisensortag.js</code> is a high-level library for the TI Bluetooth Smart SensorTag. This library asynchronously includes the EasyBLE library.</li>
+		<li><strong>Microcontrollers</strong> - Libraries are provided for a different microcontrollers, such as Arduino, Nordic Semiconductor, and RFduino. These are basic libraries that support connecting to a device and writing data.</li>
+	</ul>
+
+	<p>When using a library that asynchronously includes another library using evothings.loadScript() it is good practice to always wait for all libraries to have loaded before calling any library functions. This is typically done in the Cordova 'deviceready' event handler. Here is an example:</p>
+
+<pre>
+function initialise()
+{
+    // All async scripts are loaded, the app is
+    // ready to be initialised.
+}
+
+document.addEventListener(
+    'deviceready',
+    function() { evothings.scriptsLoaded(initialise) })
+</pre>
+
+	<p>Browse the JSDoc generated <a class="evo-lib-link" href="../lib-doc/index.html">API documentation for the Evothings JavaScript libraries</a> to learn more.</p>
+
+	<p>The source code for the libraries is found on GitHub: <a href="https://github.com/evothings/evothings-examples/tree/master/resources/libs/evothings">https://github.com/evothings/evothings-examples/tree/master/resources/libs/evothings</a></p>
+
+	<p>Some of the JavaScript libraries are written to communicate with Arduino sketches. The Arduino source code is found here: <a href="https://github.com/evothings/evothings-examples/tree/master/resources/arduino">https://github.com/evothings/evothings-examples/tree/master/resources/arduino</a></p>
+
+	<p>Please note that the example app code in the <a href="https://github.com/evothings/evothings-examples">evothings-examples</a> repository on GitHub does not contain any library files in the application folders. You must run a <a href="https://github.com/evothings/evothings-examples/blob/master/README.md">build script</a> which copies library files in the <a href="https://github.com/evothings/evothings-examples/tree/master/resources">resources folder</a> to each example. This is done to avoid code duplication in the GitHub repository and make maintenance easier. <strong>Note that in the download package of Evothings Studio the examples are already built and include all required libraries.</strong> You only need to build examples if you are working with the files in the GitHub repository.</p>
+
+</div>
+
+<script src="../js/include-footer.js"></script>
+
+</div></div>
+
+<script>
+;(function()
+{
+	// Insert link to raw plugin documentation pages,
+	// but only if browsing online.
+	var protocol = window.location.protocol
+	if (protocol != 'file:')
+	{
+		$('#SupportedPlugins a').each(function(key, value) {
+			updatePluginDocLink(value)
+		})
+
+		$('a.evo-lib-link').each(function(key, value) {
+			updateJSDocLink(value)
+		})
+	}
+
+	// Function that modified the href attribute of a plugin doc link.
+	function updatePluginDocLink(element)
+	{
+		var obj = $(element)
+		var href = obj.attr('href')
+		if (href.indexOf('../plugins') > -1)
+		{
+			href = href.replace('../plugins/', '/doc/raw/plugins/')
+			obj.attr('href', href)
+		}
+	}
+
+	// Function that modified the href attribute of a JS lib doc link.
+	function updateJSDocLink(element)
+	{
+		var obj = $(element)
+		var href = obj.attr('href')
+		href = href.replace('../lib-doc/', '/doc/raw/lib-doc/')
+		obj.attr('href', href)
+	}
+})()
+</script>
+
+</body>
+</html>

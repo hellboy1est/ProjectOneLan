@@ -1,0 +1,17 @@
+{
+  "main": "hyper/ui/hyper-ui.html",
+  "name": "Evothings Workbench",
+  "description": "HTML/JS IoT mobile app development tool",
+  "version": "1.2.0",
+  "keywords": ["Evothings Studio", "mobile", "JavaScript"],
+  "window":
+  {
+    "title": "Evothings Workbench 1.2.0",
+    "toolbar": false,
+    "frame": true,
+    "width": 700,
+    "height": 600,
+    "position": "mouse",
+    "icon": "hyper/ui/images/evothings-icon.png"
+  }
+}
