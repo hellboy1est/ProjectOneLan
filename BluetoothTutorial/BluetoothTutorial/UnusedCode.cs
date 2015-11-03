@@ -135,5 +135,46 @@ namespace BluetoothTutorial
         //}
 
     //  }
+
+
+
+
+
+         //string foo = @"C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\john.txt";
+         //               string fooo = @"C:\Program Files (x86)\PopCap Games\Mummy Maze Deluxe\WinMM.exe";
+
+         //               if (userDevices[j].UserName == "JOHN")
+         //               {
+                          
+
+         //                   if (Process.GetProcessesByName(foo).Length < 0)
+         //                   {
+         //                       // Is running
+
+         //                   }
+         //                   else
+         //                   {
+         //                       Process.Start("notepad", foo);
+         //                       Process myProcess = new Process();
+
+         //                       try
+         //                       {
+         //                           myProcess.StartInfo.UseShellExecute = false;
+         //                           // You can start any process, HelloWorld is a do-nothing example.
+         //                           myProcess.StartInfo.FileName = fooo;
+         //                           myProcess.StartInfo.CreateNoWindow = true;
+         //                           myProcess.Start();
+         //                           // This code assumes the process you are starting will terminate itself. 
+         //                           // Given that is is started without a window so you cannot terminate it 
+         //                           // on the desktop, it must terminate itself or you can do it programmatically
+         //                           // from this application using the Kill method.
+         //                       }
+         //                       catch (Exception e)
+         //                       {
+         //                           Console.WriteLine(e.Message);
+         //                       }
+         //                   }
+
+         //               }
     }
 }

@@ -17,7 +17,7 @@ using InTheHand.Net;
 using System.Net;
 using System.Web;
 using MySql;
-
+using System.Diagnostics;
 using MySql.Data.MySqlClient;
  
  
@@ -131,7 +131,7 @@ namespace BluetoothTutorial
         private void mainProgram()
         {
             userDevices.Clear();
-            InitDeviceList(); 
+            InitDeviceList();
 
             //Auto run method
             if (radioButton1.Checked == true)
@@ -144,8 +144,8 @@ namespace BluetoothTutorial
             {
                 timer1.Stop();
 
-            } 
-                 
+            }
+
             timer1.Stop();
             listBox1.Items.Clear();
             listBox2.Items.Clear();
@@ -159,7 +159,7 @@ namespace BluetoothTutorial
             sqlClient.Drop("tblknown");
             //Creates known user table
             sqlClient.Create("tblknown", "id int NOT NULL AUTO_INCREMENT, name varchar(255),counting int NOT NULL ,PRIMARY KEY (id)");
-          
+
 
             string a = "dadasd";
             string b = "";
@@ -168,12 +168,12 @@ namespace BluetoothTutorial
             {
                 a = number + ") " + devices[i].DeviceName + "/" + "Address: " + devices[i].DeviceAddress + "\r\n";
                 listBox2.Items.Add(a);
-                b = devices[i].DeviceAddress.ToString()+"\r\n";
+                b = devices[i].DeviceAddress.ToString() + "\r\n";
                 //how to store all address 
 
-             
+
                 for (int j = 0; j < userDevices.Count; j++)
-                {               
+                {
                     if (devices[i].DeviceAddress.ToString() == userDevices[j].Address)
                     {
                         //convert list items to string
@@ -181,21 +181,76 @@ namespace BluetoothTutorial
 
                         //adds '' to string,so sql can accept as a char
                         string knownuser = "'" + username.Replace(",", "','") + "'";
-                     
+
                         listBox1.Items.Add(userDevices[j].UserName);
-                        
+
                         sqlClient.Insert("tblknown", "name", knownuser);
-                        sqlClient.Update("tblknown", "counting =counting+1", "id=1"); 
+                        sqlClient.Update("tblknown", "counting =counting+1", "id=1");
+
+                        string foo = @"C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\john.txt";
+                        string fooo = @"C:\Program Files (x86)\Mozilla Firefox\firefox.exe";
+
+                        //if (userDevices[j].UserName == "RAHUL")
+                        //{
+                        //    Process.Start("notepad", foo);
+                        //    //starts .exe program
+                        //    Process myProcess = new Process();
+
+                        //    try
+                        //    {
+                        //        myProcess.StartInfo.UseShellExecute = false;
+                        //        // You can start any process, HelloWorld is a do-nothing example.
+                        //        myProcess.StartInfo.FileName = fooo;
+                        //        myProcess.StartInfo.CreateNoWindow = true;
+                        //        myProcess.Start();
+                        //        // This code assumes the process you are starting will terminate itself. 
+                        //        // Given that is is started without a window so you cannot terminate it 
+                        //        // on the desktop, it must terminate itself or you can do it programmatically
+                        //        // from this application using the Kill method.
+                        //    }
+                        //    catch (Exception e)
+                        //    {
+                        //        Console.WriteLine(e.Message);
+                        //    }
+                        //    Process.Start(@"C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan");
+                        //    Process.Start(@"C:\Windows\SysWOW64\WindowsPowerShell\v1.0\powershell.exe");
+
+                        //}
+                        number++;
+
+
+                        //   WelcomeMessage();   
+                        progressBar1.Value = 100;
+                        label1.Text = "Total Devices: " + devices.Length;
+
+                        timer1.Start();
                     }
-                    
-                } 
-                number++; 
+                }
             }
-             
-         //   WelcomeMessage();   
-            progressBar1.Value = 100;
-            label1.Text = "Total Devices: " + devices.Length;
-            timer1.Start();
+        }
+
+        protected virtual bool IsFileinUse(FileInfo file)
+        {
+            FileStream stream = null;
+
+            try
+            {
+                stream = file.Open(FileMode.Open, FileAccess.ReadWrite, FileShare.None);
+            }
+            catch (IOException)
+            {
+                //the file is unavailable because it is:
+                //still being written to
+                //or being processed by another thread
+                //or does not exist (has already been processed)
+                return true;
+            }
+            finally
+            {
+                if (stream != null)
+                    stream.Close();
+            }
+            return false;
         }
 
         private void button1_Click(object sender, EventArgs e)

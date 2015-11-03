@@ -18,7 +18,6 @@ C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTuto
 C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.Form1.resources
 C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.Properties.Resources.resources
 C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.csproj.GenerateResource.Cache
-C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\bin\Debug\MySql.Data.dll
 C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.exe.manifest
 C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\bin\Debug\BluetoothTutorial.application
 C:\Users\Rl\Desktop\Softwares Shortcut\BIT-3\Project\ProjectOneLan\BluetoothTutorial\BluetoothTutorial\obj\Debug\BluetoothTutorial.exe.manifest
