@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bit.kakkr1.digitalsignage" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconapp"
+        android:label="@string/app_name"
+         >
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MainActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainMenu"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            android:label="@string/title_activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BTUser"
+            android:label="@string/title_activity_btuser"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            android:parentActivityName=".MainMenu" >
+            <intent-filter>
+                <action android:name="android.intent.action.BTUser" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bit.kakkr1.digitalsignage.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Screens"
+            android:label="@string/title_activity_screens"
+            android:parentActivityName=".MainMenu"
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+            <intent-filter>
+                <action android:name="android.intent.action.Screen" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bit.kakkr1.digitalsignage.MainMenu" />
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".MainMenu"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.Register" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.bit.kakkr1.digitalsignage.MainMenu" />
+        </activity>
+    </application>
+
+</manifest>

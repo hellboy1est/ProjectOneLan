@@ -1,0 +1,110 @@
+<!--
+index.html => Displays information for online users that socket(server.js) has sent.
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Socket-Example</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!--jquery is required-->
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        var hostname = window.location.hostname;
+        var socket = io(hostname);
+        var lastSeen = [];
+        var elvis = "E8:99:C4:12:7E:5F";
+
+        var curUsers = {};
+
+        //display user information if online
+        function displayUser(jsonObject) {
+
+            var mac = jsonObject.bluetooth;
+            mac = mac.replace(/:/g, "");
+            $("#user").append('<div id="' + mac + '" style="display: block;">'
+
+                + '<div class="row">' + '<div class="col-md-8 col-xs-8"> <h2><font face="Bradley Hand ITC" size="6" class="label label-danger">' + jsonObject.fName + '  ' + jsonObject.lName + '</font></h2></div>' + '<div class="col-md-4 col-xs-4"><a href="#" class="img-thumbnail">  <img class="img-responsive" src="' + jsonObject.image + '" ></a></img> 				</div></div><br>' + '<div class="col-md-12 col-xs-12"><a href="#" class="img-thumbnail">  <img class="img-responsive" src="' + jsonObject.timetable + '" ></a></img> </div> </div><br>'
+
+                + '</div>');
+        }
+
+        //checks if user(s) exists or offline
+        function updateDisplay() {
+            for (var key in curUsers) {
+                var curTime = $.now();
+                var userLastSeen = curUsers[key].lastSeen;
+                console.log("update", key);
+                if (userLastSeen < curTime - 30000) {
+                    console.log("################################");
+                    var mac = key.replace(/:/g, "");
+                    $("#" + mac).fadeOut("slow", (function(m, k) {
+                        return function() {
+                            $("#" + m).remove();
+                            console.log("remove", m, k);
+                            delete curUsers[k];
+                        }
+
+                    })(mac, key));
+
+
+                }
+            }
+        }
+
+        var count = 0;
+
+        //gets json object 
+        socket.on('news', function(jsonObject) {
+
+            console.log("news", count++);
+            console.log("news", jsonObject);
+
+            if (jsonObject.bluetooth in curUsers) {
+                curUsers[jsonObject.bluetooth].lastSeen = $.now();
+
+
+            } else {
+                var newUser = {};
+                if (newUser != undefined) {
+                    newUser["lastSeen"] = $.now();
+                    curUsers[jsonObject.bluetooth] = newUser;
+
+                    displayUser(jsonObject);
+                }
+
+            }
+            updateDisplay();
+
+        });
+    </script>
+
+</head>
+
+<body>
+	  
+<div class="navbar navbar-inverse navbar-fixed-top">
+  
+ <div class="navbar-header">
+<!--add nav title -->
+ <marquee behavior="alternate"> <a class="navbar-brand" >DIGITAL SIGNAGE</a></marquee>
+<!--adds button when small screen -->
+   
+   </div>	
+   </div>
+   <br><br><br><br>
+  <div class="container" id="user">
+ 
+
+</div>  
+</body>
+
+</html>
+
