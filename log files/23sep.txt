@@ -1,0 +1,57 @@
+(**fix node not found)
+it looks like you removed(uninstalled) node from /usr/sbin, just make sure that /usr/local/bin in in your path and run
+
+bash: hash -r
+
+(**node exampe)
+//Lets require/import the HTTP module
+var http = require('http');
+
+//Lets define a port we want to listen to
+const PORT=8080; 
+
+//We need a function which handles requests and send response
+function handleRequest(request, response){
+    response.end('It Works!! Path Hit: ' + request.url);
+}
+
+//Create a server
+var server = http.createServer(handleRequest);
+
+//Lets start our server
+server.listen(PORT, function(){
+    //Callback triggered when server is successfully listening. Hurray!
+    console.log("Server listening on: http://localhost:%s", PORT);
+});
+
+(**socket.io)
+var io = require('socket.io')(80);
+var cfg = require('./config.json');
+var tw = require('node-tweet-stream')(cfg);
+tw.track('socket.io');
+tw.track('javascript');
+tw.on('tweet', function(tweet){
+  io.emit('tweet', tweet);
+});
+
+(**npm)
+if you’re unaware, npm is a package manager which provides a central repository for custom open sourced modules for Node.js and JavaScript. npm makes it simple to manage modules, their versions and distribution. We used the `npm install` command to install the required module in our project.
+
+
+(**summary)
+
+->create directory
+->create index.js file(any namme) add package(bluetooth-scanner or any) 
+->create package.json (do json stuff, name,version)
+->npm install "package name" --save(this will add dependecy to .json file)
+-> sudo node index.js (runs the file output)
+
+(**realtime-first example)
+
+->3 file, index.js,server.js,index.html
+->index.js(bluetooth scan)
+server.js(listening to bluetooth scan and sendind)
+index.html(recieves device info realtime)
+
+(**todo)
+run socket.io prorams,nodejs ....

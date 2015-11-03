@@ -1,0 +1,6 @@
+rasberry pi
+
+installing node, npm, nodejs bluetooth packages.
+
+bluetooth serial package error, fixed with installing dependencies for rasbian.
+

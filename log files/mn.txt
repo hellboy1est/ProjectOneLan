@@ -1,0 +1,22 @@
+http://stackoverflow.com/questions/16008712/i-want-real-time-update-in-post-without-reload-or-refresh
+
+https://w3c.github.io/websockets/
+
+http://socketo.me/
+
+websockets
+{
+    "autoload": {
+        "psr-0": {
+            "MyApp": "src"
+        }
+    },
+    "require": {
+        "cboden/ratchet": "0.3.*"
+    }
+}
+
+WebSocket is a protocol providing full-duplex communication channels over a single TCP connection. The WebSocket protocol was standardized by the IETF as RFC 6455 in 2011, and the WebSocket API in Web IDL is being standardized by the W3C.
+
+WebSocket is designed to be implemented in web browsers and web servers, but it can be used by any client or server application. The WebSocket Protocol is an independent TCP-based protocol. Its only relationship to HTTP is that its handshake is interpreted by HTTP servers as an Upgrade request.[1] The WebSocket protocol makes more interaction between a browser and a website possible, facilitating live content and the creation of real-time games. 
+

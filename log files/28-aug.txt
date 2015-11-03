@@ -1,0 +1,6 @@
+1) research => send data from c# form to webpage
+2)installed .net connector for c#
+https://dev.mysql.com/downloads/connector/net/6.9.html
+
+3)on click store data in phpmyadmin database table
+https://www.youtube.com/watch?v=4gybWgePuOs
