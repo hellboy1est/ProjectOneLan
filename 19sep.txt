@@ -1,1 +1,0 @@
-strip special chracters from input tagss

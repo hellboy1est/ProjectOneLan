@@ -1,5 +1,0 @@
-How does Access-Control-Allow-Origin header work?
-
-Cross-Origin Resource Sharing (CORS) is a W3C spec that allows cross-domain communication from the browser. By building on top of the XMLHttpRequest object, CORS allows developers to work with the same idioms as same-domain requests.
-
-If you can deal with JSON in return, then try using JSONP (note the P at the end) for speaking between domains:

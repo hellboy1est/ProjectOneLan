@@ -1,5 +1,0 @@
-user testing done,
-
-how to make it work in linux?
-
-hci tool linux-bluetooth
